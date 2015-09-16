@@ -9,8 +9,8 @@
 // Packery setup---------------------------------------------|
 $( function() {
   var $container = $('.packery').packery({
-    columnWidth: 25,
-    rowHeight: 25
+    columnWidth: 80,
+    rowHeight: 80
   });
   $container.find('.item').each( function( i, itemElem ) {
     // make element draggable with Draggabilly
