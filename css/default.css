@@ -1,0 +1,118 @@
+/********************************************************************************
+************************************MAIN CSS*************************************
+********************************************************************************/
+body{
+    background-image: url("../images/race-day-bw.jpg");
+}
+.packery{
+    background-image: url("../images/race-day-bw.jpg");
+    margin-top: 5%;
+}
+.mynavbar-header{
+    margin: 0px auto;
+    border: 0px;
+    /*border-color: hsla(0, 0%, 0%, 0.3);*/
+    border-radius: 0px;
+    background: #1A1A1A;
+}
+.mynavbar-footer{
+    margin: 0px auto;
+    border: 0px;
+    /*border-color: hsla(0, 0%, 0%, 0.3);*/
+    border-radius: 0px;
+    background: #1A1A1A;
+}
+#qspan{
+    font-size: 2em;
+}
+.tile-image {
+    height: 100%;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+/********************************************************************************
+************************************PACKERY*************************************
+********************************************************************************/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body { font-family: sans-serif; }
+
+.packery {
+    background: #FDD;
+    background: hsla(45, 100%, 40%, 0.2);
+}
+/* clearfix */
+.packery:after {
+    content: ' ';
+    display: block;
+    clear: right;
+}
+.item {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: #C09;
+    border: 1px solid #333;
+    border-color: hsla(0, 0%, 0%, 0.3);
+    margin: 0px auto;
+}
+.item:hover {
+    border-color: white;
+    cursor: move;
+}
+.item.wall{width: 100%;background: #1A1A1A}
+.item.hall{height:50px;background: #1A1A1A}
+.item.w1{width:100px; background: #1A1A1A;}
+.item.h1{height:100px; background: #1A1A1A;}
+.item.w1-5{width:150px; background: #1A1A1A;}
+.item.h1-5{height:150px; background: #1A1A1A;}
+.item.w2{ width:   200px; background: teal; }
+.item.h2{ height:  200px; background: teal; }
+.item.w3{ width:   300px; background: teal; }
+.item.h3{ height:  300px; background: teal; }
+.item.h4{ height: 400px; background: #1A1A1A; }
+.item.w4{ width:  400px; background: #1A1A1A; }
+.item.h5{ height: 500px; background: #1A1A1A; }
+.item.w5{ width:  500px; background: #1A1A1A; }
+.item.h6{ height: 600px; background: #1A1A1A; }
+.item.w6{ width:  600px; background: #1A1A1A; }
+
+.item.is-dragging,
+.item.is-positioning-post-drag {
+    border-color: white;
+    background: #09F;
+    z-index: 2;
+}
+/********************************************************************************
+************************************SIGNIN***************************************
+********************************************************************************/
+.signin-group{
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top:15%
+}
+.signin-input{
+    margin: 5px auto;
+    border-radius: 5px !important;
+}
+/********************************************************************************
+************************************CAROUSEL*************************************
+********************************************************************************/
+#carousel-tile{
+    height: 100%;
+    overflow: hidden;
+}
+
+.slide-image{
+    max-height: 100%;
+    width: 100%;
+}
+/********************************************************************************
+************************************SEARCH***************************************
+********************************************************************************/
+.search-row{
+    margin-top: 30%;
+}
