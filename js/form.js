@@ -5,9 +5,8 @@
     var TheSearchInput = document.getElementById('searchinput');
     var TheSearchButton = document.getElementById('thesearchbutton');
 
-    function SubmitSearch(event) {
-      event.preventDefault();
-      console.log(SearchData());
+    function SubmitSearch() {
+      console.log(SearchFormData());
       var SearchClicked = new XMLHttpRequest();
       SearchClicked.open('POST','/form',true);
       SearchClicked.setRequestHeader('Content-type','application/json');
@@ -18,21 +17,21 @@
     }
     function SearchFormData(){
       var SearchFormData = new Object();
-      SearchFormData.searchinput = document.forms[0].elements.searchinput.value;
+      SearchFormData.TheSearchInput = document.forms[0].elements.searchinput.value;
       return JSON.stringify(SearchFormData);
     }
-    //function CheckSearchInput(){
-    //  var Message = document.getElementById('mtsearchdiv');
-    //  if (TheSearchInput.length < 1){
-    //    Message = alert('Make it longer');
-    //  }else{
-    //    Message = alert('Cool, cool.');
-    //  }
-    //}
-    //TheSearchInput.addEventListener('blur', function () {
-    //  var UserSearchInput = document.getElementById('searchinput');
-    //  CheckSearchInput(UserSearchInput.value);
-    //},false);
+    function CheckSearchInput(TheSearchInput){
+      var Message = document.getElementById('mtsearchdiv');
+      if (TheSearchInput == 'search'){
+        Message.textContent = 'You can do it!';
+      } else {
+        Message.textContent = 'Sorry';
+      }
+    }
+    TheSearchInput.addEventListener('blur', function () {
+      var UserSearchInput = document.getElementById('searchinput');
+      CheckSearchInput(UserSearchInput.value);
+    },false);
     TheSearchButton.addEventListener('click',function(e){
       e.preventDefault();
       var UserSearchClick = document.getElementById('thesearchbutton');
