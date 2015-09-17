@@ -26,7 +26,7 @@
       if (TheSearchInput.length < 1){
         Message = alert('Make it longer');
       }else{
-        Message =
+        Message = alert('Cool, cool.');
       }
     }
     TheSearchInput.addEventListener('blur', function () {
