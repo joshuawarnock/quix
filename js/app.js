@@ -11,18 +11,16 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
 
-
-app.use(express.static('css'));
-app.use('/css',express.static('css'));
-app.use(express.static('images'));
-app.use('/images',express.static('images'));
-app.use(express.static('js'));
-app.use('/js', express.static('js'));
-app.use(express.static('static'));
-
+app.use(express.static('../css'));
+app.use('/css',express.static('../css'));
+app.use(express.static('../images'));
+app.use('/images',express.static('../images'));
+app.use(express.static('../js'));
+app.use('/js', express.static('../js'));
+//app.use(express.static('static'));
 
 
-// parse application/x-www-form-urlencoded
+// Parse Application
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(function(req, res, next){
@@ -35,19 +33,24 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/../index.html'));
 });
 
+
 // APP PATH
 app.get('/app', function(req, res) {
   res.sendFile(path.join(__dirname + '/app.js'));
 });
+
+
 // FORM PATH
 app.get('/form.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/form.js'));
 });
 
+
 app.post('/form',jsonParser, function(req,res){
   console.log(JSON.stringify(req.body));
   res.send('Form has been submitted');
 });
+
 
 // start the server
 var server = app.listen(1400, function(){
