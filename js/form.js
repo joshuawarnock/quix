@@ -17,7 +17,7 @@
     }
     function SearchFormData(){
       var SearchFormData = new Object();
-      SearchFormData.TheSearchInput = document.forms[0].elements.searchinput.value;
+      SearchFormData.searchinput = document.forms[0].elements.searchinput.value;
       return JSON.stringify(SearchFormData);
     }
     function CheckSearchInput(TheSearchInput){
