@@ -10,17 +10,14 @@ var path = require('path');
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
-
+app.use(express.static('js'));
+//app.use('/../js', express.static('js'));
 
 app.use(express.static('css'));
-app.use('/css',express.static('css'));
+//app.use('/css', express.static('css'));
+
 app.use(express.static('images'));
-app.use('/images',express.static('images'));
-app.use(express.static('js'));
-app.use('/js', express.static('js'));
-app.use(express.static('static'));
-
-
+//app.use('/images', express.static('images'));
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
