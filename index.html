@@ -10,9 +10,9 @@
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
-  <link href="css/default.css" type="text/css" rel="stylesheet">
   <link href="css/packery-docs.css">
   <link href="css/font-awesome.min.css">
+  <link href="css/default.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -125,7 +125,7 @@
   <!-------------------------------------SIGNIN TILE BEGIN------------------------------------->
   <div class="item w3 h3">
     <div class="input-group signin-group">
-      <form>
+      <!--<form>-->
       <div class="input-group text-center">
         <h3>Sign-In</h3>
         <div class="input-group">
@@ -134,11 +134,11 @@
         <div class="input-group">
           <input id="passwordinput" type="text" class="form-control signin-input" placeholder="Password" aria-describedby="basic-addon2">
         </div>
-        <button type="submit" class="btn btn-default">Sign In</button>
+        <button id="thesigninbutton" type="submit" class="btn btn-default">Sign In</button>
         <div id="empty-username-div"></div>
         <div id="empty-password-div"></div>
       </div>
-      </form>
+      <!--</form>-->
     </div>
   </div>
   <!-------------------------------------SIGNIN TILE END------------------------------------->
@@ -148,12 +148,13 @@
       <div class="col-md-12">
         <div id="carousel-search-container">
           <h3 class="text-center carousel-search-heading">Find your fix.</h3>
+          <form>
           <div class="input-group stylish-input-group">
-            <input type="text" class="form-control" placeholder="Search">
-                            <span class="input-group-addon carousel-search-button"><button type="submit"><span class="glyphicon glyphicon-search"></span>
-                            </button>
-                            </span>
+            <input id="searchinput" type="text" class="form-control" placeholder="Search">
+            <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
           </div>
+            <div id="mtsearchdiv"></div>
+          </form>
         </div>
       </div>
     </div>
@@ -274,8 +275,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.js"></script>
-<script src="js/packery-docs.min.js"></script>
 <script src="http://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
+<script src="js/packery-docs.min.js"></script>
 <script src="js/packery.pkgd.js"></script>
 <script src="js/packery.pkgd.min.js"></script>
 <script src="js/default.js"></script>
