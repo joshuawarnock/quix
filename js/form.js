@@ -16,6 +16,15 @@ function SubmitSearch() {
     console.log(SearchClicked.responsiveText);
   });
 }
+
+var xhr = new XMLHttpRequest();
+xhr.onload = function(){
+  if (xhr..status === 200){
+    responseObject = JSON.parse(xhr.responseText);
+    var SearchResults =
+  }
+};
+/*
 function PostedResults(){
 var SearchResults = new XMLHttpRequest();
   SearchResults.open('GET', '/api', true);
@@ -25,6 +34,7 @@ var SearchResults = new XMLHttpRequest();
     console.log(SearchResults.responseText);
   });
 }
+*/
 function SearchFormData(){
   var SearchFormData = new Object();
   SearchFormData.searchinput = document.forms[1].elements.searchinput.value;
@@ -37,7 +47,6 @@ function CheckSearchInput(TheSearchInput){
     Message.textContent = 'Sorry';
   }
 }
-
 TheSearchInput.addEventListener('blur', function () {
   var UserSearchInput = document.getElementById('searchinput');
   CheckSearchInput(UserSearchInput.value);
