@@ -2,41 +2,55 @@
  * Created by joshuawarnock on 9/16/15.
  */
 
-    var TheSearchInput = document.getElementById('searchinput');
-    var TheSearchButton = document.getElementById('thesearchbutton');
+var TheSearchInput = document.getElementById('searchinput');
+var TheSearchButton = document.getElementById('thesearchbutton');
+var SearchReturn = document.getElementById('mtsearchdiv');
 
-    function SubmitSearch() {
-      console.log(SearchFormData());
-      var SearchClicked = new XMLHttpRequest();
-      SearchClicked.open('POST','/form',true);
-      SearchClicked.setRequestHeader('Content-type','application/json');
-      SearchClicked.send(SearchFormData());
-      SearchClicked.addEventListener('load',function(){
-        console.log(SearchClicked.responsiveText);
-      });
-    }
-    function SearchFormData(){
-      var SearchFormData = new Object();
-      SearchFormData.searchinput = document.forms[1].elements.searchinput.value;
-      return JSON.stringify(SearchFormData);
-    }
-    function CheckSearchInput(TheSearchInput){
-      var Message = document.getElementById('mtsearchdiv');
-      if (TheSearchInput == 'search'){
-        Message.textContent = 'You can do it!';
-      } else {
-        Message.textContent = 'Sorry';
-      }
-    }
-    TheSearchInput.addEventListener('blur', function () {
-      var UserSearchInput = document.getElementById('searchinput');
-      CheckSearchInput(UserSearchInput.value);
-    },false);
-    TheSearchButton.addEventListener('click',function(e){
-      e.preventDefault();
-      var UserSearchClick = document.getElementById('thesearchbutton');
-      SubmitSearch(TheSearchInput.value);
-    },false);
+function SubmitSearch() {
+  console.log(SearchFormData());
+  var SearchClicked = new XMLHttpRequest();
+  SearchClicked.open('POST','/form',true);
+  SearchClicked.setRequestHeader('Content-type','application/json');
+  SearchClicked.send(SearchFormData());
+  SearchClicked.addEventListener('load',function(){
+    console.log(SearchClicked.responsiveText);
+  });
+}
+function PostedResults(){
+var SearchResults = new XMLHttpRequest();
+  SearchResults.open('GET', '/api', true);
+  SearchResults.setRequestHeader("Content-type", "application/json");
+  SearchResults.send();
+  SearchResults.addEventListener('onload', function(){
+    console.log(SearchResults.responseText);
+  });
+}
+function SearchFormData(){
+  var SearchFormData = new Object();
+  SearchFormData.searchinput = document.forms[1].elements.searchinput.value;
+  return JSON.stringify(SearchFormData);
+}
+function CheckSearchInput(TheSearchInput){
+  if (TheSearchInput == 'search'){
+    Message.textContent = 'You can do it!';
+  } else {
+    Message.textContent = 'Sorry';
+  }
+}
+
+TheSearchInput.addEventListener('blur', function () {
+  var UserSearchInput = document.getElementById('searchinput');
+  CheckSearchInput(UserSearchInput.value);
+},false);
+TheSearchButton.addEventListener('click',function(e){
+  e.preventDefault();
+  var UserSearchClick = document.getElementById('thesearchbutton');
+  SubmitSearch(TheSearchInput.value);
+},false);
+
+
+
+
 
 
 

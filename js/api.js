@@ -11,7 +11,7 @@ var google = require('google');
 
 router.get('/search/:term', function(req,res,next){
 
-  google.resultsPerPage = 2;
+  google.resultsPerPage = 10;
   var nextCounter = 0;
 
   google(req.params.term, function (err, next, links){
