@@ -2,29 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="application-name" content="Log-In" />
-  <meta name="msapplication-TileColor" content="#0911a1" />
-  <title>Smart-Auto-Tiled</title>
+
+  <!--<meta name="application-name" content="log-in" />-->
+  <!--<meta name="msapplication-tileColor" content="#0911a1" />-->
+
+  <title>quix</title>
   <link rel="stylesheet" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="bootstrap.min.css" type="text/css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
-  <link href="css/packery-docs.css">
-  <link href="css/font-awesome.min.css">
+  <!--<link href="css/packery-docs.css" rel="stylesheet">-->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/default.css" type="text/css" rel="stylesheet">
+  <script src="https://www.google.com/jsapi" type="text/javascript"></script>
 </head>
-
 <body>
-<header></header>
-
-
-<!--GLOBAL-->
-<!-------------------------------------HEADER TILE BEGIN------------------------------------->
-
-
+<!-- -----------------------------------HEADER TILE BEGIN-------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top mynavbar-header">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -34,8 +29,6 @@
       </button>
       <a class="navbar-brand" href="#"><span id="qspan">Q</span>uix</a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a id="account-button" href="#" class="btn-link" data-toggle="append" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-star fa-spin"></i> Account</a>
@@ -53,12 +46,9 @@
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
-
 </nav>
-
 <div class="packery">
-  <!------------PACKERY BEGIN------------>
-
+  <!-- ----------PACKERY BEGIN-------------->
   <div class="item w2 h2">
     <a href="#" class="btn-link" role="button" aria-haspopup="true" aria-expanded="false"><img class="tile-image" src="images/my-account-icon.png">
     </a>
@@ -66,12 +56,10 @@
   <div class="item w2 h2">
     <img class="tile-image" src="images/my-vehicles-icon.png">
   </div>
-  <!-------------------------------------CAROUSEL TILE BEGIN------------------------------------->
-
+  <!-- -----------------------------------CAROUSEL TILE BEGIN----------------------------------- -->
   <div class="item w4 h2">
 
     <div id="carousel-tile" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#carousel-tile" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-tile" data-slide-to="1"></li>
@@ -120,8 +108,8 @@
     </div>
 
   </div>
-  <!-------------------------------------CAROUSEL TILE END------------------------------------->
-  <!-------------------------------------SIGNIN TILE BEGIN------------------------------------->
+  <!-- -----------------------------------CAROUSEL TILE END----------------------------------- -->
+  <!-- -----------------------------------SIGNIN TILE BEGIN----------------------------------- -->
   <div class="item w3 h3">
     <div class="input-group signin-group">
       <!--<form>-->
@@ -140,8 +128,8 @@
       <!--</form>-->
     </div>
   </div>
-  <!-------------------------------------SIGNIN TILE END------------------------------------->
-  <!-------------------------------------SEARCH TILE BEGIN----------------------------------->
+  <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
+  <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
   <div class="item w3 h3">
     <div class="row center-block search-row">
       <div class="col-md-12">
@@ -158,7 +146,7 @@
       </div>
     </div>
   </div>
-  <!-------------------------------------SIGNIN TILE END------------------------------------->
+  <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
   <div class="item w2 h2">
     <img class="tile-image" src="images/manual-icon-tran.png">
   </div>
@@ -171,7 +159,7 @@
   </div>
 
 </div>
-<!------------PACKERY END------------>
+<!-- ----------PACKERY END---------- -->
 
 
 <footer class="footer">
@@ -185,11 +173,11 @@
 
     </div>
     <!-- /.container-fluid -->
-    <!----------------------------------------------------MODAL BEGIN--------------------------------------------->
+    <!-- --------------------------------------------------MODAL BEGIN------------------------------------------- -->
     <div class="container">
       <div class="row">
         <div class="col-md-3 pull-right" id="manage-vehicles">
-          <!------------------------MY VEHICLE WINDOW BEGIN------------------------->
+          <!-- ----------------------MY VEHICLE WINDOW BEGIN----------------------- -->
           <div id="myModal" class="modal fade" role="form" aria-labelledby="gridSystemModalLabel">
             <div class="modal-body">
               <div class="modal-content container-fluid modal-area">
@@ -200,7 +188,7 @@
                 <div class="modal-body">
                   <div class="row">
                     <div class="col-md-12">
-                      <!--------------------------BREADCRUMB BEGIN------------------------->
+                      <!-- ------------------------BREADCRUMB BEGIN----------------------- -->
                       <ul class="btn-group btn-breadcrumbs" id="breadcrumbs" role="menubar" aria-label="breadcrumb">
                         <li role="menuitem"><a id="year-crumb" class="btn btn-sm" data-toggle="year" href="#">Year</a>
                         </li>
@@ -211,7 +199,7 @@
                         <li role="menuitem"><a id="edition-crumb" class="btn btn-sm" data-toggle="edition" href="#">Edition</a>
                         </li>
                       </ul>
-                      <!--------------------------BREADCRUMB END------------------------->
+                      <!-- ------------------------BREADCRUMB END----------------------- -->
                     </div>
                     <div class="col-md-12">
                       <div class="dropdown modal-dropdowns">

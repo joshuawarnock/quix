@@ -7,7 +7,25 @@ var request = require('request');
 var path = require('path');
 var router = express.Router();
 
+var google = require('google');
 
+google.resultsPerPage = 25;
+var nextCounter = 0;
+
+google('/:term', function (err, next, links){
+  if (err) console.error(err);
+
+  for (var i = 0; i < links.length; ++i){
+    console.log(links[i].title + '-' + links[i].link);
+    console.log(links[i].description + '\n')
+  }
+  if (nextCounter < 4){
+    nextCounter +=1;
+    if (next) next()
+  }
+});
+
+/*
 router.get('/:term', function(req, res, next) {
   request('http://api.nytimes.com/svc/search/v2/articlesearch.json'+
       '?fq='+ req.params.term +
@@ -21,7 +39,7 @@ router.get('/:term', function(req, res, next) {
         res.send(urls);
       });
 });
-
+*/
 
 module.exports = router;
 
