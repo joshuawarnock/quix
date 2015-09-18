@@ -21,9 +21,13 @@ var xhr = new XMLHttpRequest();
 xhr.onload = function(){
   if (xhr..status === 200){
     responseObject = JSON.parse(xhr.responseText);
-    var SearchResults =
+    var SearchResults = '';
+    for (var i = 0; i < responseObject.searchinput.length; i++){
+    }
+    document.getElementById('mtsearchdiv').innerHTML = SearchResults;
   }
 };
+xhr.open('GET', )
 /*
 function PostedResults(){
 var SearchResults = new XMLHttpRequest();
