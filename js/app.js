@@ -10,7 +10,6 @@ var api = require('./api.js');
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
-
 app.use(express.static('../css'));
 app.use('/css',express.static('../css'));
 app.use(express.static('../images'));
@@ -18,6 +17,7 @@ app.use('/images',express.static('../images'));
 app.use(express.static('../js'));
 app.use('/js', express.static('../js'));
 
+app.use('/api',api);
 
 // Parse Application
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,20 +31,13 @@ app.use(function(req, res, next){
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/../index.html'));
 });
+
 // Google API Path
 app.get('api', function(req, res) {
   res.sendFile(path.join(__dirname + '/api.js'));
 });
 
-
-
-
-
-// App Path
-app.get('/app', function(req, res) {
-  res.sendFile(path.join(__dirname + '/app.js'));
-});
-// FORM PATH
+// Form Path
 app.get('/form.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/form.js'));
 });

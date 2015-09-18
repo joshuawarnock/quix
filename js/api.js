@@ -9,21 +9,17 @@ var router = express.Router();
 
 var google = require('google');
 
-google.resultsPerPage = 25;
-var nextCounter = 0;
+router.get('/search/:term', function(req,res,next){
 
-google('/:term', function (err, next, links){
-  if (err) console.error(err);
+  google.resultsPerPage = 2;
+  var nextCounter = 0;
 
-  for (var i = 0; i < links.length; ++i){
-    console.log(links[i].title + '-' + links[i].link);
-    console.log(links[i].description + '\n')
-  }
-  if (nextCounter < 4){
-    nextCounter +=1;
-    if (next) next()
-  }
+  google(req.params.term, function (err, next, links){
+    if (err) console.error(err);
+    res.send(links);
+  });
 });
+
 
 /*
 router.get('/:term', function(req, res, next) {
