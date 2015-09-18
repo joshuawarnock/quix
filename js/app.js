@@ -6,7 +6,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var path = require('path');
-//var api = require('api.js');
+var api = require('./api.js');
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
@@ -32,9 +32,9 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/../index.html'));
 });
 // Google API Path
-//app.get('api', function(req, res) {
-//  res.sendFile(path.join(__dirname + '/api.js'));
-//});
+app.get('api', function(req, res) {
+  res.sendFile(path.join(__dirname + '/api.js'));
+});
 
 
 
