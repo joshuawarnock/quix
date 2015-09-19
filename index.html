@@ -11,7 +11,7 @@
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
-  <!--<link href="css/packery-docs.css" rel="stylesheet">-->
+  <link href="css/packery-docs.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/default.css" type="text/css" rel="stylesheet">
   <!--<script src="https://www.google.com/jsapi" type="text/javascript"></script>-->
@@ -31,132 +31,134 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a id="account-button" href="#" class="btn-link" data-toggle="append" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-star fa-spin"></i> Account</a>
-        </li>
-        <li><a id="vehicle-button" href="#" class="btn-link" data-toggle="append" data-target="#myModal"><i class="fa fa-cog fa-spin"></i> My Vehicles</a>
-        </li>
+        <li><a id="account-button" href="#" class="btn-link" data-toggle="append" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-star fa-spin"></i> Account</a></li>
+        <li><a id="vehicle-button" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cog fa-spin"></i> My Vehicles</a></li>
+        <li><a id="manual-button" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cog fa-spin"></i>Manuals</a></li>
+        <li><a id="shop-button" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cog fa-spin"></i>Shop</a></li>
+        <li><a id="video-button" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cog fa-spin"></i>Videos</a></li>
+        <li><a id="search-button" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cog fa-spin"></i>Search</a></li>
       </ul>
-      <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
+      <!--<form class="navbar-form navbar-right" role="search">-->
+        <!--<div class="form-group">-->
+          <!--<input type="text" class="form-control" placeholder="Search">-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-default">Submit</button>-->
+      <!--</form>-->
     </div>
     <!-- /.navbar-collapse -->
   </div>
   <!-- /.container-fluid -->
 </nav>
-<div class="packery">
-  <!-- ----------PACKERY BEGIN-------------->
-  <div class="item w2 h2">
-    <a href="#" class="btn-link" role="button" aria-haspopup="true" aria-expanded="false"><img class="tile-image" src="images/my-account-icon.png">
-    </a>
-  </div>
-  <div class="item w2 h2">
-    <img class="tile-image" src="images/my-vehicles-icon.png">
-  </div>
+<div class="packery"><!-- ----------PACKERY BEGIN-------------->
+
+  <!--<div id="account-tile" class="item w2 h2">-->
+    <!--&lt;!&ndash;<a href="#" class="btn-link" role="button" aria-haspopup="true" aria-expanded="false"><img class="tile-image" src="images/my-account-icon.png">&ndash;&gt;-->
+    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+  <!--</div>-->
+  <!--<div id="vehicles-tile" class="item w2 h2">-->
+    <!--&lt;!&ndash;<img class="tile-image" src="images/my-vehicles-icon.png">&ndash;&gt;-->
+  <!--</div>-->
   <!-- -----------------------------------CAROUSEL TILE BEGIN----------------------------------- -->
-  <div class="item w4 h2">
+  <!--<div class="item w4 h2">-->
 
-    <div id="carousel-tile" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-tile" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-tile" data-slide-to="1"></li>
-        <li data-target="#carousel-tile" data-slide-to="2"></li>
-      </ol>
+    <!--<div id="carousel-tile" class="carousel slide" data-ride="carousel">-->
+      <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#carousel-tile" data-slide-to="0" class="active"></li>-->
+        <!--<li data-target="#carousel-tile" data-slide-to="1"></li>-->
+        <!--<li data-target="#carousel-tile" data-slide-to="2"></li>-->
+      <!--</ol>-->
 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
+      <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+      <!--<div class="carousel-inner" role="listbox">-->
 
-        <div class="slide active">
-          <img class="slide-image" src="images/FZ1.jpg" alt="Chania">
-          <div class="carousel-caption">
-            <h3>Slide One</h3>
-            <p>Slide One Slide One Slide One Slide One</p>
-          </div>
-        </div>
+        <!--<div class="slide active">-->
+          <!--<img class="slide-image" src="images/FZ1.jpg" alt="Chania">-->
+          <!--<div class="carousel-caption">-->
+            <!--<h3>Slide One</h3>-->
+            <!--<p>Slide One Slide One Slide One Slide One</p>-->
+          <!--</div>-->
+        <!--</div>-->
 
-        <div class="slide">
-          <img class="slide-image" src="images/dogs1.jpg" alt="Chania">
-          <div class="carousel-caption">
-            <h3>Slide Two</h3>
-            <p>Slide Two Slide Two Slide Two Slide Two Slide Two</p>
-          </div>
-        </div>
+        <!--<div class="slide">-->
+          <!--<img class="slide-image" src="images/dogs1.jpg" alt="Chania">-->
+          <!--<div class="carousel-caption">-->
+            <!--<h3>Slide Two</h3>-->
+            <!--<p>Slide Two Slide Two Slide Two Slide Two Slide Two</p>-->
+          <!--</div>-->
+        <!--</div>-->
 
-        <div class="slide">
-          <img class="slide-image" src="images/Gorgeous_puppies.jpg" alt="Flower">
-          <div class="carousel-caption">
-            <h3>Slide Three</h3>
-            <p>Slide Three Slide Three Slide Three Slide Three</p>
-          </div>
-        </div>
+        <!--<div class="slide">-->
+          <!--<img class="slide-image" src="images/Gorgeous_puppies.jpg" alt="Flower">-->
+          <!--<div class="carousel-caption">-->
+            <!--<h3>Slide Three</h3>-->
+            <!--<p>Slide Three Slide Three Slide Three Slide Three</p>-->
+          <!--</div>-->
+        <!--</div>-->
 
 
-      </div>
+      <!--</div>-->
 
-      <!-- Left and right controls -->
-      <a class="left carousel-control" href="#carousel-tile" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#carousel-tile" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
+      <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
+      <!--<a class="left carousel-control" href="#carousel-tile" role="button" data-slide="prev">-->
+        <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+        <!--<span class="sr-only">Previous</span>-->
+      <!--</a>-->
+      <!--<a class="right carousel-control" href="#carousel-tile" role="button" data-slide="next">-->
+        <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+        <!--<span class="sr-only">Next</span>-->
+      <!--</a>-->
+    <!--</div>-->
 
-  </div>
+  <!--</div>-->
   <!-- -----------------------------------CAROUSEL TILE END----------------------------------- -->
   <!-- -----------------------------------SIGNIN TILE BEGIN----------------------------------- -->
-  <div class="item w3 h3">
-    <div class="input-group signin-group">
-      <!--<form>-->
-      <div class="input-group text-center">
-        <h3>Sign-In</h3>
-        <div class="input-group">
-          <input id="emailinput" type="text" class="form-control signin-input" placeholder="E-mail">
-        </div>
-        <div class="input-group">
-          <input id="passwordinput" type="text" class="form-control signin-input" placeholder="Password" aria-describedby="basic-addon2">
-        </div>
-        <button id="thesigninbutton" type="submit" class="btn btn-default">Sign In</button>
-        <div id="empty-username-div"></div>
-        <div id="empty-password-div"></div>
-      </div>
-      <!--</form>-->
-    </div>
-  </div>
+  <!--<div class="item w3 h3">-->
+    <!--<div class="input-group signin-group center-block">-->
+      <!--&lt;!&ndash;<form>&ndash;&gt;-->
+      <!--<div class="input-group text-center">-->
+        <!--<h3>Sign-In</h3>-->
+        <!--<div class="input-group">-->
+          <!--<input id="emailinput" type="text" class="form-control signin-input" placeholder="E-mail">-->
+        <!--</div>-->
+        <!--<div class="input-group">-->
+          <!--<input id="passwordinput" type="text" class="form-control signin-input" placeholder="Password" aria-describedby="basic-addon2">-->
+        <!--</div>-->
+        <!--<button id="thesigninbutton" type="submit" class="btn btn-default">Sign In</button>-->
+        <!--<div id="empty-username-div"></div>-->
+        <!--<div id="empty-password-div"></div>-->
+      <!--</div>-->
+      <!--&lt;!&ndash;</form>&ndash;&gt;-->
+    <!--</div>-->
+  <!--</div>-->
   <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
   <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
-  <div class="item w3 h3">
-    <div class="row center-block search-row">
-      <div class="col-md-12">
-        <div id="carousel-search-container">
-          <h3 class="text-center carousel-search-heading">Find your fix.</h3>
-          <form>
-          <div class="input-group stylish-input-group">
-            <input id="searchinput" type="text" class="form-control" placeholder="Search">
-            <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
-          </div>
-            <div id="mtsearchdiv"></div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!--<div class="item w3 h3">-->
+    <!--<div class="row center-block search-row">-->
+      <!--<div class="col-md-12">-->
+        <!--<div id="carousel-search-container">-->
+          <!--<h3 class="text-center carousel-search-heading">Find your fix.</h3>-->
+          <!--<form>-->
+          <!--<div class="input-group stylish-input-group">-->
+            <!--<input id="searchinput" type="text" class="form-control" placeholder="Search">-->
+            <!--<span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>-->
+          <!--</div>-->
+            <!--<div id="mtsearchdiv"></div>-->
+          <!--</form>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
   <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
-  <div class="item w2 h2">
-    <img class="tile-image" src="images/manual-icon-tran.png">
-  </div>
-  <div class="item w2 h2">
-    <img class="tile-image" src="images/parts-shopping-icon.png">
-  </div>
+  <!--<div id="manual-tile" class="item w2 h2">-->
+    <!--&lt;!&ndash;<img class="tile-image" src="images/manual-icon-tran.png">&ndash;&gt;-->
+  <!--</div>-->
+  <!--<div id="shopping-tile" class="item w2 h2">-->
+    <!--&lt;!&ndash;<img class="tile-image" src="images/parts-shopping-icon.png">&ndash;&gt;-->
+  <!--</div>-->
 
-  <div class="item w2 h2">
-    <img class="tile-image" src="images/play-icon.png">
-  </div>
+  <!--<div id="video-tile" class="item w2 h2">-->
+    <!--&lt;!&ndash;<img class="tile-image" src="images/play-icon.png">&ndash;&gt;-->
+  <!--</div>-->
 
 </div>
 <!-- ----------PACKERY END---------- -->

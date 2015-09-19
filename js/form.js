@@ -17,17 +17,17 @@ function SubmitSearch() {
   });
 }
 
-var xhr = new XMLHttpRequest();
-xhr.onload = function(){
-  if (xhr..status === 200){
-    responseObject = JSON.parse(xhr.responseText);
-    var SearchResults = '';
-    for (var i = 0; i < responseObject.searchinput.length; i++){
-    }
-    document.getElementById('mtsearchdiv').innerHTML = SearchResults;
-  }
-};
-xhr.open('GET', )
+//var xhr = new XMLHttpRequest();
+//xhr.onload = function(){
+//  if (xhr.status === 200){
+//    responseObject = JSON.parse(xhr.responseText);
+//    var SearchResults = '';
+//    for (var i = 0; i < responseObject.searchinput.length; i++){
+//    }
+//    document.getElementById('mtsearchdiv').innerHTML = SearchResults;
+//  }
+//};
+//xhr.open('GET', )
 /*
 function PostedResults(){
 var SearchResults = new XMLHttpRequest();
@@ -41,7 +41,7 @@ var SearchResults = new XMLHttpRequest();
 */
 function SearchFormData(){
   var SearchFormData = new Object();
-  SearchFormData.searchinput = document.forms[1].elements.searchinput.value;
+  SearchFormData.searchinput = document.forms[0].elements.searchinput.value;
   return JSON.stringify(SearchFormData);
 }
 function CheckSearchInput(TheSearchInput){

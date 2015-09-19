@@ -28,7 +28,7 @@ body{
 }
 .tile-image {
     height: 100%;
-    width: 100%;
+    width: auto;
     padding: 10px 10px 10px 10px;
 }
 /********************************************************************************
@@ -43,7 +43,8 @@ body { font-family: sans-serif; }
 
 .packery {
     background: #FDD;
-    background: hsla(45, 100%, 40%, 0.2);
+    /*background: hsla(45, 100%, 40%, 0.2);*/
+    background: #1A1A1A;
 }
 /* clearfix */
 .packery:after {
@@ -64,22 +65,22 @@ body { font-family: sans-serif; }
     border-color: white;
     cursor: move;
 }
-.item.wall{ width: 100%; background: #1A1A1A }
-.item.hall{height:50px; background: #1A1A1A }
-.item.w1{ width:100px; background: #1A1A1A; }
-.item.h1{ height:100px; background: #1A1A1A; }
-.item.w1-5{ width:150px; background: #1A1A1A; }
-.item.h1-5{ height:150px; background: #1A1A1A; }
-.item.w2{ width: 200px; background: teal; }
-.item.h2{ height: 200px; background: teal; }
-.item.w3{ width:  300px; background: teal; }
-.item.h3{ height: 300px; background: teal; }
-.item.h4{ height: 400px; background: #1A1A1A; }
-.item.w4{ width: 400px; background: #1A1A1A; }
-.item.h5{ height: 500px; background: #1A1A1A; }
-.item.w5{ width: 500px; background: #1A1A1A; }
-.item.h6{ height: 600px; background: #1A1A1A; }
-.item.w6{ width: 600px; background: #1A1A1A; }
+/*.item.wall{ width: 100%; background: #1A1A1A }*/
+/*.item.hall{height:50px; background: #1A1A1A }*/
+/*.item.w1{ width:100px; background: #1A1A1A; }*/
+/*.item.h1{ height:100px; background: #1A1A1A; }*/
+/*.item.w1-5{ width:150px; background: #1A1A1A; }*/
+/*.item.h1-5{ height:150px; background: #1A1A1A; }*/
+/*.item.w2{ width: 200px; background: teal; }*/
+/*.item.h2{ height: 200px; background: teal; }*/
+/*.item.w3{ width:  300px; background: teal; }*/
+/*.item.h3{ height: 300px; background: teal; }*/
+/*.item.h4{ height: 400px; background: #1A1A1A; }*/
+/*.item.w4{ width: 400px; background: #1A1A1A; }*/
+/*.item.h5{ height: 500px; background: #1A1A1A; }*/
+/*.item.w5{ width: 500px; background: #1A1A1A; }*/
+/*.item.h6{ height: 600px; background: #1A1A1A; }*/
+/*.item.w6{ width: 600px; background: #1A1A1A; }*/
 
 .item.is-dragging,
 .item.is-positioning-post-drag {
@@ -87,13 +88,33 @@ body { font-family: sans-serif; }
     background: #09F;
     z-index: 2;
 }
+#account-tile{
+    background-image: url("/images/my-account-icon.png");
+    background-repeat: no-repeat;
+}
+#vehicles-tile{
+    background-image: url("/images/my-vehicles-icon.png");
+    background-repeat: no-repeat;
+}
+#manual-tile{
+    background-image: url("/images/manual-icon-tran.png");
+    background-repeat: no-repeat;
+}
+#shopping-tile{
+    background-image: url("/images/parts-shopping-icon.png");
+    background-repeat: no-repeat;
+}
+#video-tile{
+    background-image: url("/images/play-icon.png");
+    background-repeat: no-repeat;
+}
 /********************************************************************************
 ************************************SIGNIN***************************************
 ********************************************************************************/
 .signin-group{
     margin-left: 20%;
     margin-right: 20%;
-    margin-top:15%
+    margin-top:80px
 }
 .signin-input{
     margin: 5px auto;
@@ -102,17 +123,17 @@ body { font-family: sans-serif; }
 /********************************************************************************
 ************************************CAROUSEL*************************************
 ********************************************************************************/
-#carousel-tile{
-    height: 100%;
-    overflow: hidden;
-}
-.slide-image{
-    height: 100%;
-    width: auto;
-}
+/*#carousel-tile{*/
+    /*height: 100%;*/
+    /*overflow: hidden;*/
+/*}*/
+/*.slide-image{*/
+    /*height: 100%;*/
+    /*width: auto;*/
+/*}*/
 /********************************************************************************
 ************************************SEARCH***************************************
 ********************************************************************************/
 .search-row{
-    margin-top: 30%;
+    margin-top: 80px;
 }

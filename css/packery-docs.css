@@ -1738,15 +1738,31 @@ div.param {
   border: 4px solid #333;
   border-color: hsla(0, 0%, 0%, 0.3);
 }
-
+.item.w1{ width:100px; background: #1A1A1A; }
+.item.h1{ height:100px; background: #1A1A1A; }
+.item.w1-5{ width:150px; background: #1A1A1A; }
+.item.h1-5{ height:150px; background: #1A1A1A; }
+.packery .item.w2 { width:   200px; background: #9C0; }
+.packery .item.h2 { height:  200px; background: #0C9; }
+.item.w3{ width:  300px; background: teal; }
+.item.h3{ height: 300px; background: teal; }
+.packery .item.h4 { height: 400px; background: #C90; }
+.packery .item.w4 { width:  400px; background: #90C; }
+.item.h5{ height: 500px; background: #1A1A1A; }
+.item.w5{ width: 500px; background: #1A1A1A; }
+.item.h6{ height: 600px; background: #1A1A1A; }
+.item.w6{ width: 600px; background: #1A1A1A; }
+/* Old Packery Sizes */
+/*
 .packery .item.w2 { width:   80px; background: #9C0; }
 .packery .item.h2 { height:  80px; background: #0C9; }
 .packery .item.h4 { height: 160px; background: #C90; }
 .packery .item.w4 { width:  160px; background: #90C; }
+*/
 
 .packery .item.gigante {
-  width: 120px;
-  height: 160px;
+  width: 100%;
+  height: 300px;
   z-index: 10; /* keep it above other items */
 }
 
