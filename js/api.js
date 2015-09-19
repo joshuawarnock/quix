@@ -17,6 +17,7 @@ router.get('/search/:term', function(req,res,next){
   google(req.params.term, function (err, next, links){
     if (err) console.error(err);
     res.send(links);
+    //console.log(links);
   });
 });
 

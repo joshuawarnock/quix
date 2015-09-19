@@ -9,36 +9,20 @@ var SearchReturn = document.getElementById('mtsearchdiv');
 function SubmitSearch() {
   console.log(SearchFormData());
   var SearchClicked = new XMLHttpRequest();
-  SearchClicked.open('POST','/form',true);
+  SearchClicked.open('GET','/api/search/' + TheSearchInput.value,true);
   SearchClicked.setRequestHeader('Content-type','application/json');
-  SearchClicked.send(SearchFormData());
+  SearchClicked.send();
   SearchClicked.addEventListener('load',function(){
-    console.log(SearchClicked.responsiveText);
-  });
-}
+    //console.log(SearchClicked.responseText);
+    var Results = JSON.parse(SearchClicked.responseText);
+    //console.log(Results.length);
+    //SearchReturn.textContent = SearchClicked.responseText;
 
-//var xhr = new XMLHttpRequest();
-//xhr.onload = function(){
-//  if (xhr.status === 200){
-//    responseObject = JSON.parse(xhr.responseText);
-//    var SearchResults = '';
-//    for (var i = 0; i < responseObject.searchinput.length; i++){
-//    }
-//    document.getElementById('mtsearchdiv').innerHTML = SearchResults;
-//  }
-//};
-//xhr.open('GET', )
-/*
-function PostedResults(){
-var SearchResults = new XMLHttpRequest();
-  SearchResults.open('GET', '/api', true);
-  SearchResults.setRequestHeader("Content-type", "application/json");
-  SearchResults.send();
-  SearchResults.addEventListener('onload', function(){
-    console.log(SearchResults.responseText);
+    for (var i = 0; i < Results.length; i++){
+      console.log(SearchClicked.responseText.title);
+    }
   });
 }
-*/
 function SearchFormData(){
   var SearchFormData = new Object();
   SearchFormData.searchinput = document.forms[0].elements.searchinput.value;
@@ -62,7 +46,28 @@ TheSearchButton.addEventListener('click',function(e){
 },false);
 
 
-
+//var xhr = new XMLHttpRequest();
+//xhr.onload = function(){
+//  if (xhr.status === 200){
+//    responseObject = JSON.parse(xhr.responseText);
+//    var SearchResults = '';
+//    for (var i = 0; i < responseObject.searchinput.length; i++){
+//    }
+//    document.getElementById('mtsearchdiv').innerHTML = SearchResults;
+//  }
+//};
+//xhr.open('GET', )
+/*
+ function PostedResults(){
+ var SearchResults = new XMLHttpRequest();
+ SearchResults.open('GET', '/api', true);
+ SearchResults.setRequestHeader("Content-type", "application/json");
+ SearchResults.send();
+ SearchResults.addEventListener('onload', function(){
+ console.log(SearchResults.responseText);
+ });
+ }
+ */
 
 
 

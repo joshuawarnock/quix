@@ -6,7 +6,7 @@
 // http://packery.metafizzy.co/packery.pkgd.js
 // http://draggabilly.desandro.com/draggabilly.pkgd.js
 
-// Packery setup---------------------------------------------|
+// Packery setup------------------------------------------------------------------|
 $( function() {
   var $container = $('.packery').packery({
     columnWidth: 20,
@@ -19,9 +19,7 @@ $( function() {
     $container.packery( 'bindDraggabillyEvents', draggie );
   });
 });
-
-// Prepend Tile Begin---------------------------------------------|
-
+// Prepend Tile Begin-------------------------------------------------------------|
 // Account Tile
 $( function() {
   var $container = $('.packery').packery();
@@ -122,9 +120,11 @@ $( function() {
 function MakeAccountTile() {
   var elem = document.createElement('div');
   elem.className = 'item w3 h3';
-  elem.id = 'acount-tile';
+  elem.id = 'account-tile';
+  //elem.background = "url('/images/my-account-icon.png') no-repeat center center";
   elem.style.backgroundImage = "url('/images/my-account-icon.png')";
   elem.style.backgroundRepeat = "no-repeat";
+  elem.style.verticalAlign = "middle";
   return elem;
 }
 // Vehicle Tile Maker
@@ -134,7 +134,6 @@ function VehicleTileMaker() {
   elem.id = 'vehicles-tile';
   elem.style.backgroundImage = "url('/images/my-vehicles-icon.png')";
   elem.style.backgroundRepeat = "no-repeat";
-
   return elem;
 }
 // Manual Tile Maker
@@ -144,7 +143,6 @@ function ManualTileMaker() {
   elem.id = 'manual-tile';
   elem.style.backgroundImage = "url('/images/manual-icon-tran.png')";
   elem.style.backgroundRepeat = "no-repeat";
-
   return elem;
 }
 // Shop Tile Maker
@@ -154,7 +152,6 @@ function ShopTileMaker() {
   elem.id = 'shop-tile';
   elem.style.backgroundImage = "url('/images/parts-shopping-icon.png')";
   elem.style.backgroundRepeat = "no-repeat";
-
   return elem;
 }
 // Video Tile Maker
@@ -178,8 +175,7 @@ function VideoTileMaker() {
 //}
 function SearchTileMaker() {
   var elem = document.createElement('div');
-  elem.innerHTML = '<div class="item w3 h3"> <div class="row center-block search-row"> <div class="col-md-12"> <div id="carousel-search-container"> <h3 class="text-center carousel-search-heading">Find your fix.</h3> <form> <div class="input-group stylish-input-group"> <input id="searchinput" type="text" class="form-control" placeholder="Search"> <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span> </div> <div id="mtsearchdiv"></div> </form> </div> </div> </div> </div>';
-
+  elem.innerHTML = '<div class="item w3 h3"><div class="row center-block search-row"> <div class="col-md-12"> <div id="carousel-search-container"> <h3 class="text-center carousel-search-heading">Find your fix.</h3> <form> <div class="input-group stylish-input-group"> <input id="searchinput" type="text" class="form-control" placeholder="Search"> <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span> </div> <div id="mtsearchdiv"></div> </form> </div> </div> </div> </div>';
   return elem;
 }
 // Prepend Tile End---------------------------------------------|
