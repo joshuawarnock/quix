@@ -195,23 +195,17 @@ $( function() {
     }
   });
 });
-
-
 var TheSearchButton = document.getElementById('thesearchbutton');
-
 function ResultResize(){
   var ResultBox = document.getElementById('search-box');
   ResultBox.style.height = '1500px';
   ResultBox.style.width = '100%';
 }
-
 TheSearchButton.addEventListener('click',function(e){
   e.preventDefault();
   var UserSearchClick = document.getElementById('return1title');
   ResultResize(TheSearchInput.value);
 },false);
-
-
 
 //$(document).ready(function() {
 //  $('#carousel-tile').carousel({
