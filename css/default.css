@@ -136,3 +136,15 @@ body { font-family: sans-serif; }
 .search-row{
     margin-top: 80px;
 }
+#search-return-area{
+    color: white;
+}
+.return-title{
+    font-size: 24px;
+}
+.return-link{
+    text-decoration: underline;
+}
+.return-description{
+    font-size: 18px;
+}
