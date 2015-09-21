@@ -64,7 +64,45 @@ function checkTheclick(contentId){
     section.style.display = 'block';
   }
 }
+// Year breadcrumb selector
+$('#year').change( function(){
+  var element = document.getElementById('year');
+  var selectedYear = element.options[element.selectedIndex].text;
+  var yearCrumb = document.getElementById('year-crumb');
+  yearCrumb.text = selectedYear;
+});
 
+// Make breadcrumb selector
+$('#make').change( function(){
+  var element = document.getElementById('make');
+  var selectedMake = element.options[element.selectedIndex].text;
+  var makeCrumb = document.getElementById('make-crumb');
+  makeCrumb.text = selectedMake;
+});
+
+// Model breadcrumb selector
+$('#model').change( function(){
+  var element = document.getElementById('model');
+  var selectedModel = element.options[element.selectedIndex].text;
+  var modelCrumb = document.getElementById('model-crumb');
+  modelCrumb.text = selectedModel;
+});
+
+// Edition breadcrumb selector
+$('#edition').change( function(){
+  var element = document.getElementById('edition');
+  var selectedEdition = element.options[element.selectedIndex].text;
+  var editionCrumb = document.getElementById('edition-crumb');
+  editionCrumb.text = selectedEdition;
+});
+
+// Model breadcrumb selector
+$('#front-elec').change( function(){
+  var element = document.getElementById('front-elec');
+  var selectedFront = element.options[element.selectedIndex].text;
+  var frontCrumb = document.getElementById('first-crumb');
+  frontCrumb.text = selectedFront;
+});
 
 //$(document).ready(function() {
 //  $('#carousel-tile').carousel({
