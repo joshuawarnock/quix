@@ -89,28 +89,38 @@ body { font-family: sans-serif; }
 }
 #account-tile{
     display: block;
-    /*background-image: url("/images/my-account-icon.png");*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("/images/my-account-icon.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
-#vehicles-tile{
+#vehicle-tile{
     display: block;
-    /*background-image: url("/images/my-vehicles-icon.png");*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("/images/my-vehicles-icon.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 #manual-tile{
     display: block;
-    /*background-image: url("/images/manual-icon-tran.png");*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("/images/manual-icon-tran.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
-#shopping-tile{
+#shop-tile{
     display: block;
-    /*background-image: url("/images/parts-shopping-icon.png");*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("/images/parts-shopping-icon.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 #video-tile{
     display: block;
-    /*background-image: url("/images/play-icon.png");*/
-    /*background-repeat: no-repeat;*/
+    background-image: url("/images/play-icon.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
 }
 /********************************************************************************
 ************************************SIGNIN***************************************
@@ -143,6 +153,7 @@ body { font-family: sans-serif; }
 }
 #search-return-area{
     color: white;
+    padding: 10px 10px 10px 10px;
 }
 .return-title{
     font-size: 24px;
