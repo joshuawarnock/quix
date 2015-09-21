@@ -88,24 +88,29 @@ body { font-family: sans-serif; }
     z-index: 2;
 }
 #account-tile{
-    background-image: url("/images/my-account-icon.png");
-    background-repeat: no-repeat;
+    display: block;
+    /*background-image: url("/images/my-account-icon.png");*/
+    /*background-repeat: no-repeat;*/
 }
 #vehicles-tile{
-    background-image: url("/images/my-vehicles-icon.png");
-    background-repeat: no-repeat;
+    display: block;
+    /*background-image: url("/images/my-vehicles-icon.png");*/
+    /*background-repeat: no-repeat;*/
 }
 #manual-tile{
-    background-image: url("/images/manual-icon-tran.png");
-    background-repeat: no-repeat;
+    display: block;
+    /*background-image: url("/images/manual-icon-tran.png");*/
+    /*background-repeat: no-repeat;*/
 }
 #shopping-tile{
-    background-image: url("/images/parts-shopping-icon.png");
-    background-repeat: no-repeat;
+    display: block;
+    /*background-image: url("/images/parts-shopping-icon.png");*/
+    /*background-repeat: no-repeat;*/
 }
 #video-tile{
-    background-image: url("/images/play-icon.png");
-    background-repeat: no-repeat;
+    display: block;
+    /*background-image: url("/images/play-icon.png");*/
+    /*background-repeat: no-repeat;*/
 }
 /********************************************************************************
 ************************************SIGNIN***************************************
