@@ -25,6 +25,9 @@ body{
 #qspan{
     font-size: 2em;
 }
+#vehicle-selection{
+    margin-top: 1.5%;
+}
 .tile-image {
     height: 100%;
     width: auto;
@@ -167,9 +170,12 @@ body { font-family: sans-serif; }
 /********************************************************************************
 *******************************VEHICLE SELECTOR**********************************
 ********************************************************************************/
-.vehicle-selector{
+#vehicle-selector{
     text-align: center;
     margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: none;
 }
 #breadcrumbs li{
     display: inline;
@@ -244,6 +250,8 @@ ul{
 }
 .dropdowns{
     margin-top: 5%;
+    /*margin-left: 5%;*/
+    /*margin-right: 5%;*/
 }
 .buttons{
     margin-top: 5%;

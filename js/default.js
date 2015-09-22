@@ -34,6 +34,8 @@ $( function() {
     }
   });
 });
+// Packery setup------------------------------------------------------------------|
+// Search Tile Expand and Listener-------------------------------|
 var TheSearchButton = document.getElementById('thesearchbutton');
 function ResultResize(){
   var ResultBox = document.getElementById('search-tile');
@@ -45,17 +47,13 @@ TheSearchButton.addEventListener('click',function(e){
   var UserSearchClick = document.getElementById('return1title');
   ResultResize(TheSearchInput.value);
 },false);
-
-var TheAccountButton = document.getElementById('account-button');
-var TheAccountTile = document.getElementById('account-tile');
+// Search Tile Expand and Listener-------------------------------|
 
 var grabbedList = document.getElementById('nav-list');
-
 grabbedList.addEventListener('click', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
   checkTheclick(content);
 },false);
-
 function checkTheclick(contentId){
   var section = document.getElementById(contentId);
   if (section.style.display == 'block') {
@@ -64,6 +62,49 @@ function checkTheclick(contentId){
     section.style.display = 'block';
   }
 }
+var VehicleTile = document.getElementById('vehicle-tile');
+VehicleTile.addEventListener('dblclick', function(theEvent){
+  var content = theEvent.target.getAttribute('data-content');
+  SelectorShow(content);
+},false);
+function SelectorShow(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+
+var VehicleSubmitButton = document.getElementById('vehicle-submit-button');
+var VehicleCancelButton = document.getElementById('vehicle-cancel-button');
+
+function VehicleSelection(){
+  var VehicleDisplay = document.getElementById('vehicle-selection');
+  var VehicleYear = document.getElementById('year');
+  var VehicleMake = document.getElementById('make');
+  var VehicleModel = document.getElementById('model');
+  var VehicleEdition = document.getElementById('edition');
+  var VehicleEngine = document.getElementById('engine');
+  VehicleDisplay.textContent = 'Current Vehicle: ' + VehicleYear.value + ' ' + VehicleMake.value + ' ' + VehicleModel.value + ' ' + VehicleEdition.value + ' ' + VehicleEngine.value;
+}
+//function VehicleSelectionCancel(){
+//  var VehicleTile = document.getElementById('vehicle-tile');
+//  VehicleTile.className = 'item w3 h3';
+//}
+VehicleSubmitButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  event.preventDefault();
+  VehicleSelection(content);
+},false);
+//VehicleCancelButton.addEventListener('click', function(event){
+//  event.preventDefault();
+//  VehicleSelectionCancel()
+//},false);
+
+
+
+// Breadcrumb Selector ------------------------------------------|
 // Year breadcrumb selector
 $('#year').change( function(){
   var element = document.getElementById('year');
@@ -95,14 +136,20 @@ $('#edition').change( function(){
   var editionCrumb = document.getElementById('edition-crumb');
   editionCrumb.text = selectedEdition;
 });
-
-// Model breadcrumb selector
-$('#front-elec').change( function(){
-  var element = document.getElementById('front-elec');
-  var selectedFront = element.options[element.selectedIndex].text;
-  var frontCrumb = document.getElementById('first-crumb');
-  frontCrumb.text = selectedFront;
+// Engine breadcrumb selector
+$('#engine').change( function(){
+  var element = document.getElementById('engine');
+  var selectedEdition = element.options[element.selectedIndex].text;
+  var editionCrumb = document.getElementById('engine-crumb');
+  editionCrumb.text = selectedEdition;
 });
+//// Model breadcrumb selector
+//$('#front-elec').change( function(){
+//  var element = document.getElementById('front-elec');
+//  var selectedFront = element.options[element.selectedIndex].text;
+//  var frontCrumb = document.getElementById('first-crumb');
+//  frontCrumb.text = selectedFront;
+//});
 
 //$(document).ready(function() {
 //  $('#carousel-tile').carousel({
