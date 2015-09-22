@@ -47,24 +47,155 @@
   <!-- ----------PACKERY BEGIN-------------->
   <div id="account-tile" class="item w3 h3">
 
-    <div class="col-md-12 text-center">
-      <div id="account-button-group" class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">Profile</button>
-        <button type="button" class="btn btn-default">Vehicles</button>
-        <button type="button" class="btn btn-default">Projects</button>
-        <button type="button" class="btn btn-default">Friends</button>
-        <button type="button" class="btn btn-default">Photos</button>
+    <div id="account-container" class="container">
+      <div class="row">
+        <div class="col-lg-10 col-sm-11 ">
+          <div class="row profile">
+            <div class="col-sm-3">
+              <div class="row">
+                <div class="col-xs-7 col-sm-12">
+                  <img id="profile-image" src="images/blank-profile.jpg">
+                </div>
+                <ul class="profile-details">
+                  <li class="general-info"><h5><i class="fa fa-user"></i> Weekend-Warrior</h5></li>
+                  <li class="general-info"><h5><i class="fa fa-map-marker"></i> Irvine, CA</h5></li>
+                  <li class="general-info"><h5><i class="fa fa-envelope"></i> WWarrior@gmail.com</h5></li>
+                </ul>
+              </div>
+            </div>
+            <!-----------------------------TABS------------------------------------>
+            <div class="col-sm-9">
+              <div id="account-button-group" class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default">Profile</button>
+                <button type="button" class="btn btn-default">Vehicles</button>
+                <button type="button" class="btn btn-default">Projects</button>
+                <button type="button" class="btn btn-default">Friends</button>
+                <button type="button" class="btn btn-default">Photos</button>
+              </div>
+              <div class="tab-content all-tabs-content">
+                <!-----------------------------------------------------------------PROFILE TAB BEGIN------------------------------->
+                <div id="profile-tab">
+                  <div class="row tab-row">
+                    <div class="col-md-5">
+                      <h4>About Me</h4>
+                      <h4>Job</h4>
+                    </div>
+                    <div class="col-md-7">
+                      <h4 class="account-heading">My Skills</h4>
+                      <ul class="skill-bar">
+                        <li>
+                          <h5>Spark Plug Replacement</h5>
+                          <h5>'09 Yamaha FZ1</h5>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-----------------------------------------------------------------PROFILE TAB END--------------------------------->
+                <div id="vehicles-tab">
+                  <div class="row tab-row">
+                    <div class="col-md-7">
+                      <h4 class="account-heading">My Vehicles</h4>
+                      <ul class="vehicles-bar">
+                        <li><h5>'99 Honda Accord</h5></li>
+                        <li><h5>'15 Honda CRV</h5></li>
+                        <li><h5>'09 Yamaha FZ1</h5></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="projects-tab">
+                  <div class="row tab-row">
+                    <div class="col-md-5">
+                      <h4>Projects</h4>
+                      <h5>Lorem ipsum</h5>
+                    </div>
+                  </div>
+                </div>
+                <div id="friends-tab">
+                  <div class="row tab-row">
+                    <div class="col-md-12">
+                      <ul class="friends-list list-inline">
+                        <li>
+                          <a class="avatar" href="#"><img src="images/blank-profile.jpg"></a>
+                          <div id="friend-name">Luke Skywalker</div>
+                          <span class="label label-info">Info</span>
+                          <span class="label label-success">active</span>
+                          <a href="#" class="fa fa-facebook-square"></a>
+                          <a href="#" class="fa fa-twitter-square"></a>
+                          <a href="#" class="fa fa-linkedin-square"></a>
+                        </li>
+                        <li>
+                          <a class="avatar" href="#"><img src="images/blank-profile.jpg"></a>
+                          <div>Roman Mars</div>
+                          <span class="label label-info">Info</span>
+                          <span class="label label-warning">busy</span>
+                          <a href="#" class="fa fa-facebook-square"></a>
+                          <a href="#" class="fa fa-twitter-square"></a>
+                          <a href="#" class="fa fa-linkedin-square"></a>
+                        </li>
+                        <li>
+                          <a class="avatar" href="#"><img src="images/blank-profile.jpg"></a>
+                          <div>May Linger</div>
+                          <span class="label label-info">Info</span>
+                          <span class="label label-danger">blocked</span>
+                          <a href="#" class="fa fa-facebook-square"></a>
+                          <a href="#" class="fa fa-twitter-square"></a>
+                          <a href="#" class="fa fa-linkedin-square"></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div id="photos-tab">
+                  <div class="row tab-row">
+                    <div class="col-md-12">
+                      <div><img class="photo-thumbnail" id="photo-thumbnail" src="images/blank-profile.jpg"></div>
+                      <div><img class="photo-thumbnail" id="photo-thumbnail" src="images/blank-profile.jpg"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="col-md-2">
-      <img id="profile-image" src="images/blank-profile.jpg">
-      <ul class="profile-details">
-        <li><h5><i class="fa fa-user"></i> Username</h5></li>
-        <li><h5><i class="fa fa-envelope"></i> e-mail</h5></li>
-        <li><h5><i class="fa fa-map-marker"></i> City, State</h5></li>
-      </ul>
-    </div>
+    <!--<div class="row">-->
+
+      <!--<div class="col-md-3">-->
+        <!--<div class="row">-->
+
+          <!--<div class="col-md-12 text-center">-->
+            <!--<div id="account-button-group" class="btn-group" role="group" aria-label="...">-->
+              <!--<button type="button" class="btn btn-default">Profile</button>-->
+              <!--<button type="button" class="btn btn-default">Vehicles</button>-->
+              <!--<button type="button" class="btn btn-default">Projects</button>-->
+              <!--<button type="button" class="btn btn-default">Friends</button>-->
+              <!--<button type="button" class="btn btn-default">Photos</button>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--<div class="col-md-2">-->
+            <!--<img id="profile-image" src="images/blank-profile.jpg">-->
+            <!--<ul class="profile-details">-->
+              <!--<li class="general-info"><h5><i class="fa fa-user"></i> Weekend-Warrior</h5></li>-->
+              <!--<li class="general-info"><h5><i class="fa fa-map-marker"></i> Irvine, CA</h5></li>-->
+              <!--<li class="general-info"><h5><i class="fa fa-envelope"></i> WWarrior@gmail.com</h5></li>-->
+            <!--</ul>-->
+          <!--</div>-->
+
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="row">-->
+        <!--<div class="col-md-9">-->
+          <!--<h5>About Me</h5>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    <!--</div>-->
   </div>
 
   <div id="vehicle-tile" data-content="vehicle-selector" class="item w3 h3">

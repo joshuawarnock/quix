@@ -128,9 +128,64 @@ body { font-family: sans-serif; }
 /********************************************************************************
 *********************************ACCOUNT TILE************************************
 ********************************************************************************/
+#account-container{
+    margin-left: 5%;
+    display: none;
+}
+#profile-tab{
+    display: none;
+}
+#vehicles-tab{
+    display: none;
+}
+#projects-tab{
+    display: none;
+}
+#friends-tab{
+    display: none;
+}
+#photos-tab{
+    display: none;
+}
 #profile-image{
+    width: 90%;
+    height: auto;
+}
+.photo-thumbnail{
     width: 20%;
     height: auto;
+    margin: 5px 5px 5px 0px;
+}
+.general-info{
+    margin-bottom: -5%;
+}
+
+#friends-tab{
+    box-sizing: border-box;
+}
+#friends-tab ul li{
+    width: auto;
+    min-width: 225px;
+    border: 1px solid #e9ebec;
+    background: #f7f7f8;
+    float: left;
+    padding: 5px;
+    margin: 5px 0 5px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#friends-tab ul li div{
+    text-align: center;
+}
+.avatar img{
+    height: 80px;
+    width: 70px;
+}
+/*.friends-list li{*/
+/*width: 200px !important;*/
+/*}*/
+.friends-list li .avatar{
+    float: left;
 }
 /********************************************************************************
 ************************************SIGNIN***************************************

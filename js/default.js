@@ -48,7 +48,7 @@ TheSearchButton.addEventListener('click',function(e){
   ResultResize(TheSearchInput.value);
 },false);
 // Search Tile Expand and Listener-------------------------------|
-
+// Tile Hide/Show-------------------------------------------|
 var grabbedList = document.getElementById('nav-list');
 grabbedList.addEventListener('click', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
@@ -62,6 +62,8 @@ function checkTheclick(contentId){
     section.style.display = 'block';
   }
 }
+// Tile Hide/Show-------------------------------------------|
+// Vehicle Selector Hide/Show-----------------------------|
 var VehicleTile = document.getElementById('vehicle-tile');
 VehicleTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
@@ -75,7 +77,8 @@ function SelectorShow(contentId){
     section.style.display = 'block';
   }
 }
-
+// Vehicle Selector Hide/Show-----------------------------|
+// Vehicle Selector Display Selection--------------------------------------|
 var VehicleSubmitButton = document.getElementById('vehicle-submit-button');
 var VehicleCancelButton = document.getElementById('vehicle-cancel-button');
 
@@ -101,7 +104,23 @@ VehicleSubmitButton.addEventListener('click', function(event){
 //  event.preventDefault();
 //  VehicleSelectionCancel()
 //},false);
+// Vehicle Selector Display Selection--------------------------------------|
 
+// Soon to be account Hide/Show-----------------------------|
+var VehicleTile = document.getElementById('vehicle-tile');
+VehicleTile.addEventListener('dblclick', function(theEvent){
+  var content = theEvent.target.getAttribute('data-content');
+  SelectorShow(content);
+},false);
+function SelectorShow(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+// Soon to be account Hide/Show-----------------------------|
 
 
 // Breadcrumb Selector ------------------------------------------|
