@@ -107,12 +107,12 @@ VehicleSubmitButton.addEventListener('click', function(event){
 // Vehicle Selector Display Selection--------------------------------------|
 
 // Soon to be account Hide/Show-----------------------------|
-var VehicleTile = document.getElementById('vehicle-tile');
-VehicleTile.addEventListener('dblclick', function(theEvent){
+var AccountTile = document.getElementById('account-tile');
+AccountTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
-  SelectorShow(content);
+  AccountShow(content);
 },false);
-function SelectorShow(contentId){
+function AccountShow(contentId){
   var section = document.getElementById(contentId);
   if (section.style.display == 'block') {
     section.style.display = 'none';
