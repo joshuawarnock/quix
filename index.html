@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>quix</title>
   <link rel="stylesheet" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
   <link href="css/packery-docs.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/default.css" type="text/css" rel="stylesheet">
 </head>
+
 <body>
 <!-- -----------------------------------HEADER TILE BEGIN-------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top mynavbar-header">
@@ -26,12 +30,12 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul id="nav-list" class="nav navbar-nav">
-        <li><a id="account-button" data-content="account-tile" href="#" class="btn-link" data-toggle="append" role="button" aria-haspopup="true" aria-expanded="false"><i class=""></i> Account</a></li>
-        <li><a id="vehicle-button" data-content="vehicle-tile" href="#" class="btn-link" data-toggle="append"><i class=""></i> My Vehicles</a></li>
-        <li><a id="manual-button" data-content="manual-tile" href="#" class="btn-link" data-toggle="append"><i class=""></i>Manuals</a></li>
-        <li><a id="shop-button" data-content="shop-tile" href="#" class="btn-link" data-toggle="append"><i class=""></i>Shop</a></li>
-        <li><a id="video-button" data-content="video-tile" href="#" class="btn-link" data-toggle="append"><i class=""></i>Videos</a></li>
-        <li><a id="search-button" data-content="search-tile" href="#" class="btn-link" data-toggle="append"><i class=""></i>Search</a></li>
+        <li><a id="account-button" data-content="account-tile" href="#" class="btn-link" data-toggle="append" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Account</a></li>
+        <li><a id="vehicle-button" data-content="vehicle-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cog fa-spin"></i> My Vehicles</a></li>
+        <li><a id="manual-button" data-content="manual-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-book"></i> Manuals</a></li>
+        <li><a id="shop-button" data-content="shop-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cart-plus"></i> Shop</a></li>
+        <li><a id="video-button" data-content="video-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-play-circle"></i> Videos</a></li>
+        <li><a id="search-button" data-content="search-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-search-plus"></i> Search</a></li>
       </ul>
       <div id="vehicle-selection"></div>
     </div>
@@ -39,9 +43,30 @@
   </div>
   <!-- /.container-fluid -->
 </nav>
-<div class="packery"><!-- ----------PACKERY BEGIN-------------->
+<div class="packery">
+  <!-- ----------PACKERY BEGIN-------------->
   <div id="account-tile" class="item w3 h3">
+
+    <div class="col-md-12 text-center">
+      <div id="account-button-group" class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">Profile</button>
+        <button type="button" class="btn btn-default">Vehicles</button>
+        <button type="button" class="btn btn-default">Projects</button>
+        <button type="button" class="btn btn-default">Friends</button>
+        <button type="button" class="btn btn-default">Photos</button>
+      </div>
+    </div>
+
+    <div class="col-md-2">
+      <img id="profile-image" src="images/blank-profile.jpg">
+      <ul class="profile-details">
+        <li><h5><i class="fa fa-user"></i> Username</h5></li>
+        <li><h5><i class="fa fa-envelope"></i> e-mail</h5></li>
+        <li><h5><i class="fa fa-map-marker"></i> City, State</h5></li>
+      </ul>
+    </div>
   </div>
+
   <div id="vehicle-tile" data-content="vehicle-selector" class="item w3 h3">
     <div id="vehicle-selector">
       <div class="row">
@@ -216,74 +241,74 @@
   <!-- -----------------------------------CAROUSEL TILE BEGIN----------------------------------- -->
   <!--<div class="item w4 h2">-->
 
-    <!--<div id="carousel-tile" class="carousel slide" data-ride="carousel">-->
-      <!--<ol class="carousel-indicators">-->
-        <!--<li data-target="#carousel-tile" data-slide-to="0" class="active"></li>-->
-        <!--<li data-target="#carousel-tile" data-slide-to="1"></li>-->
-        <!--<li data-target="#carousel-tile" data-slide-to="2"></li>-->
-      <!--</ol>-->
+  <!--<div id="carousel-tile" class="carousel slide" data-ride="carousel">-->
+  <!--<ol class="carousel-indicators">-->
+  <!--<li data-target="#carousel-tile" data-slide-to="0" class="active"></li>-->
+  <!--<li data-target="#carousel-tile" data-slide-to="1"></li>-->
+  <!--<li data-target="#carousel-tile" data-slide-to="2"></li>-->
+  <!--</ol>-->
 
-      <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
-      <!--<div class="carousel-inner" role="listbox">-->
+  <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
+  <!--<div class="carousel-inner" role="listbox">-->
 
-        <!--<div class="slide active">-->
-          <!--<img class="slide-image" src="images/FZ1.jpg" alt="Chania">-->
-          <!--<div class="carousel-caption">-->
-            <!--<h3>Slide One</h3>-->
-            <!--<p>Slide One Slide One Slide One Slide One</p>-->
-          <!--</div>-->
-        <!--</div>-->
+  <!--<div class="slide active">-->
+  <!--<img class="slide-image" src="images/FZ1.jpg" alt="Chania">-->
+  <!--<div class="carousel-caption">-->
+  <!--<h3>Slide One</h3>-->
+  <!--<p>Slide One Slide One Slide One Slide One</p>-->
+  <!--</div>-->
+  <!--</div>-->
 
-        <!--<div class="slide">-->
-          <!--<img class="slide-image" src="images/dogs1.jpg" alt="Chania">-->
-          <!--<div class="carousel-caption">-->
-            <!--<h3>Slide Two</h3>-->
-            <!--<p>Slide Two Slide Two Slide Two Slide Two Slide Two</p>-->
-          <!--</div>-->
-        <!--</div>-->
+  <!--<div class="slide">-->
+  <!--<img class="slide-image" src="images/dogs1.jpg" alt="Chania">-->
+  <!--<div class="carousel-caption">-->
+  <!--<h3>Slide Two</h3>-->
+  <!--<p>Slide Two Slide Two Slide Two Slide Two Slide Two</p>-->
+  <!--</div>-->
+  <!--</div>-->
 
-        <!--<div class="slide">-->
-          <!--<img class="slide-image" src="images/Gorgeous_puppies.jpg" alt="Flower">-->
-          <!--<div class="carousel-caption">-->
-            <!--<h3>Slide Three</h3>-->
-            <!--<p>Slide Three Slide Three Slide Three Slide Three</p>-->
-          <!--</div>-->
-        <!--</div>-->
+  <!--<div class="slide">-->
+  <!--<img class="slide-image" src="images/Gorgeous_puppies.jpg" alt="Flower">-->
+  <!--<div class="carousel-caption">-->
+  <!--<h3>Slide Three</h3>-->
+  <!--<p>Slide Three Slide Three Slide Three Slide Three</p>-->
+  <!--</div>-->
+  <!--</div>-->
 
 
-      <!--</div>-->
+  <!--</div>-->
 
-      <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
-      <!--<a class="left carousel-control" href="#carousel-tile" role="button" data-slide="prev">-->
-        <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-        <!--<span class="sr-only">Previous</span>-->
-      <!--</a>-->
-      <!--<a class="right carousel-control" href="#carousel-tile" role="button" data-slide="next">-->
-        <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-        <!--<span class="sr-only">Next</span>-->
-      <!--</a>-->
-    <!--</div>-->
+  <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
+  <!--<a class="left carousel-control" href="#carousel-tile" role="button" data-slide="prev">-->
+  <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+  <!--<span class="sr-only">Previous</span>-->
+  <!--</a>-->
+  <!--<a class="right carousel-control" href="#carousel-tile" role="button" data-slide="next">-->
+  <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+  <!--<span class="sr-only">Next</span>-->
+  <!--</a>-->
+  <!--</div>-->
 
   <!--</div>-->
   <!-- -----------------------------------CAROUSEL TILE END----------------------------------- -->
   <!-- -----------------------------------SIGNIN TILE BEGIN----------------------------------- -->
   <!--<div class="item w3 h3">-->
-    <!--<div class="input-group signin-group center-block">-->
-      <!--&lt;!&ndash;<form>&ndash;&gt;-->
-      <!--<div class="input-group text-center">-->
-        <!--<h3>Sign-In</h3>-->
-        <!--<div class="input-group">-->
-          <!--<input id="emailinput" type="text" class="form-control signin-input" placeholder="E-mail">-->
-        <!--</div>-->
-        <!--<div class="input-group">-->
-          <!--<input id="passwordinput" type="text" class="form-control signin-input" placeholder="Password" aria-describedby="basic-addon2">-->
-        <!--</div>-->
-        <!--<button id="thesigninbutton" type="submit" class="btn btn-default">Sign In</button>-->
-        <!--<div id="empty-username-div"></div>-->
-        <!--<div id="empty-password-div"></div>-->
-      <!--</div>-->
-      <!--&lt;!&ndash;</form>&ndash;&gt;-->
-    <!--</div>-->
+  <!--<div class="input-group signin-group center-block">-->
+  <!--&lt;!&ndash;<form>&ndash;&gt;-->
+  <!--<div class="input-group text-center">-->
+  <!--<h3>Sign-In</h3>-->
+  <!--<div class="input-group">-->
+  <!--<input id="emailinput" type="text" class="form-control signin-input" placeholder="E-mail">-->
+  <!--</div>-->
+  <!--<div class="input-group">-->
+  <!--<input id="passwordinput" type="text" class="form-control signin-input" placeholder="Password" aria-describedby="basic-addon2">-->
+  <!--</div>-->
+  <!--<button id="thesigninbutton" type="submit" class="btn btn-default">Sign In</button>-->
+  <!--<div id="empty-username-div"></div>-->
+  <!--<div id="empty-password-div"></div>-->
+  <!--</div>-->
+  <!--&lt;!&ndash;</form>&ndash;&gt;-->
+  <!--</div>-->
   <!--</div>-->
   <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
   <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
@@ -293,60 +318,62 @@
         <div id="carousel-search-container">
           <h3 class="text-center carousel-search-heading">Find your fix.</h3>
           <form>
-          <div class="input-group stylish-input-group">
-            <input id="searchinput" type="text" class="form-control" placeholder="Search">
-            <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
-          </div>
-          <div id="search-return-area">
-            <div id="return1title" class="return-title"></div>
-            <div id="return1link" class="return-link"></div>
-            <div id="return1desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return2title" class="return-title"></div>
-            <div id="return2link" class="return-link"></div>
-            <div id="return2desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return3title" class="return-title"></div>
-            <div id="return3link" class="return-link"></div>
-            <div id="return3desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return4title" class="return-title"></div>
-            <div id="return4link" class="return-link"></div>
-            <div id="return4desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return5title" class="return-title"></div>
-            <div id="return5link" class="return-link"></div>
-            <div id="return5desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return6title" class="return-title"></div>
-            <div id="return6link" class="return-link"></div>
-            <div id="return6desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return7title" class="return-title"></div>
-            <div id="return7link" class="return-link"></div>
-            <div id="return7desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return8title" class="return-title"></div>
-            <div id="return8link" class="return-link"></div>
-            <div id="return8desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return9title" class="return-title"></div>
-            <div id="return9link" class="return-link"></div>
-            <div id="return9desc" class="return-description"></div>
-            <br>
-            <br>
-            <div id="return10title" class="return-title"></div>
-            <div id="return10link" class="return-link"></div>
-            <div id="return10desc" class="return-description"></div>
-          </div>
+            <div class="input-group stylish-input-group">
+              <input id="searchinput" type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                </span>
+            </div>
+            <div id="search-return-area">
+              <div id="return1title" class="return-title"></div>
+              <div id="return1link" class="return-link"></div>
+              <div id="return1desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return2title" class="return-title"></div>
+              <div id="return2link" class="return-link"></div>
+              <div id="return2desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return3title" class="return-title"></div>
+              <div id="return3link" class="return-link"></div>
+              <div id="return3desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return4title" class="return-title"></div>
+              <div id="return4link" class="return-link"></div>
+              <div id="return4desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return5title" class="return-title"></div>
+              <div id="return5link" class="return-link"></div>
+              <div id="return5desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return6title" class="return-title"></div>
+              <div id="return6link" class="return-link"></div>
+              <div id="return6desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return7title" class="return-title"></div>
+              <div id="return7link" class="return-link"></div>
+              <div id="return7desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return8title" class="return-title"></div>
+              <div id="return8link" class="return-link"></div>
+              <div id="return8desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return9title" class="return-title"></div>
+              <div id="return9link" class="return-link"></div>
+              <div id="return9desc" class="return-description"></div>
+              <br>
+              <br>
+              <div id="return10title" class="return-title"></div>
+              <div id="return10link" class="return-link"></div>
+              <div id="return10desc" class="return-description"></div>
+            </div>
           </form>
         </div>
       </div>
@@ -463,10 +490,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.js"></script>
 <script src="http://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/packery-docs.min.js"></script>
 <script src="js/packery.pkgd.js"></script>
 <script src="js/packery.pkgd.min.js"></script>
 <script src="js/default.js"></script>
 <script src="js/form.js"></script>
 </body>
+
 </html>
