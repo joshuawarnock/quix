@@ -1,9 +1,7 @@
 /**
  * Created by joshuawarnock on 9/15/15.
  */
-// external js
-// http://packery.metafizzy.co/packery.pkgd.js
-// http://draggabilly.desandro.com/draggabilly.pkgd.js
+
 // Packery setup------------------------------------------------------------------|
 $( function() {
   var $container = $('.packery').packery({
@@ -70,11 +68,8 @@ var ProjectsButton = document.getElementById('projects-button');
 var FriendsButton = document.getElementById('friends-button');
 var PhotosButton = document.getElementById('photos-button');
 function ShowProfile(contentId){
-  console.log('Made it in');
   var section = document.getElementById(contentId);
-  console.log(contentId);
   var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  console.log(elStyle);
   if (elStyle == 'block') {
     section.style.display = 'none';
   } else if (elStyle == 'none' || elStyle == '') {
@@ -83,39 +78,42 @@ function ShowProfile(contentId){
 }
 function ShowVehicle(contentId){
   var section = document.getElementById(contentId);
-  if (section.style.display == 'block') {
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  if (elStyle == 'block') {
     section.style.display = 'none';
-  } else if (section.style.display == 'none' || section.style.display == '') {
+  } else if (elStyle == 'none' || elStyle == '') {
     section.style.display = 'block';
   }
 }
 function ShowProjects(contentId){
   var section = document.getElementById(contentId);
-  if (section.style.display == 'block') {
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  if (elStyle == 'block') {
     section.style.display = 'none';
-  } else if (section.style.display == 'none' || section.style.display == '') {
+  } else if (elStyle == 'none' || elStyle == '') {
     section.style.display = 'block';
   }
 }
 function ShowFriends(contentId){
   var section = document.getElementById(contentId);
-  if (section.style.display == 'block') {
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  if (elStyle == 'block') {
     section.style.display = 'none';
-  } else if (section.style.display == 'none' || section.style.display == '') {
+  } else if (elStyle == 'none' || elStyle == '') {
     section.style.display = 'block';
   }
 }
 function ShowPhotos(contentId){
   var section = document.getElementById(contentId);
-  if (section.style.display == 'block') {
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  if (elStyle == 'block') {
     section.style.display = 'none';
-  } else if (section.style.display == 'none' || section.style.display == '') {
+  } else if (elStyle == 'none' || elStyle == '') {
     section.style.display = 'block';
   }
 }
 ProfileButton.addEventListener('click', function(event){
   var content = event.target.getAttribute('data-content');
-  console.log(content);
   ShowProfile(content);
 },true);
 VehicleButton.addEventListener('click', function(event){
@@ -134,46 +132,6 @@ PhotosButton.addEventListener('click', function(event){
   var content = event.target.getAttribute('data-content');
   ShowPhotos(content);
 },true);
-//$("#profile-button").click(function () {
-//  $("profile-tab").show("slow");
-//
-//  $("vehicles-tab").hide("slow");
-//  $("projects-tab").hide("slow");
-//  $("friends-tab").hide("slow");
-//  $("photos-tab").hide("slow");
-//});
-//$("#vehicles-button").click(function () {
-//  $("vehicles-tab").show("slow");
-//
-//  $("profile-tab").hide("slow");
-//  $("projects-tab").hide("slow");
-//  $("friends-tab").hide("slow");
-//  $("photos-tab").hide("slow");
-//});
-//$("#projects-button").click(function () {
-//  $("projects-tab").show("slow");
-//
-//  $("profile-tab").hide("slow");
-//  $("vehicles-tab").hide("slow");
-//  $("friends-tab").hide("slow");
-//  $("photos-tab").hide("slow");
-//});
-//$("#friends-button").click(function () {
-//  $("friends-tab").show("slow");
-//
-//  $("profile-tab").hide("slow");
-//  $("vehicles-tab").hide("slow");
-//  $("projects-tab").hide("slow");
-//  $("photos-tab").hide("slow");
-//});
-//$("#photos-button").click(function () {
-//  $("photos-tab").show("slow");
-//
-//  $("profile-tab").hide("slow");
-//  $("vehicles-tab").hide("slow");
-//  $("projects-tab").hide("slow");
-//  $("friends-tab").hide("slow");
-//});
 // Vehicle Selector Hide/Show-----------------------------|
 var VehicleTile = document.getElementById('vehicle-tile');
 VehicleTile.addEventListener('dblclick', function(theEvent){

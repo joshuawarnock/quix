@@ -41,14 +41,13 @@
 <div class="packery">
   <!-- ----------PACKERY BEGIN-------------->
   <div id="account-tile" data-content="account-container" class="item w3 h3">
-    <div class="tile-expand"></div>
     <div id="account-container" class="container">
       <div class="row">
-        <div class="col-md-10">
+        <div class="col-md-8">
           <div class="row profile">
             <div class="col-sm-3">
               <div class="row">
-                <div class="col-xs-7 col-sm-12">
+                <div class="col-md-3">
                   <img id="profile-image" src="images/weekend-warrior.gif">
                 </div>
                 <ul id="profile-details">
@@ -59,13 +58,13 @@
               </div>
             </div>
             <!-----------------------------TABS------------------------------------>
-            <div class="col-sm-9">
+            <div class="col-md-6">
               <div id="account-button-group" class="btn-group" role="group" aria-label="...">
-                <button id="profile-button"  type="button" class="btn btn-default">Profile</button>
-                <button id="vehicles-button"  type="button" class="btn btn-default">Vehicles</button>
-                <button id="projects-button"  type="button" class="btn btn-default">Projects</button>
-                <button id="friends-button"  type="button" class="btn btn-default">Friends</button>
-                <button id="photos-button"  type="button" class="btn btn-default">Photos</button>
+                <button id="profile-button" data-content="profile-tab" type="button" class="btn btn-default">Profile</button>
+                <button id="vehicles-button" data-content="vehicles-tab" type="button" class="btn btn-default">Vehicles</button>
+                <button id="projects-button" data-content="projects-tab" type="button" class="btn btn-default">Projects</button>
+                <button id="friends-button" data-content="friends-tab" type="button" class="btn btn-default">Friends</button>
+                <button id="photos-button" data-content="photos-tab" type="button" class="btn btn-default">Photos</button>
               </div>
               <div class="tab-content all-tabs-content">
                 <!-----------------------------------------------------------------PROFILE TAB BEGIN------------------------------->
@@ -73,7 +72,6 @@
                   <div class="row tab-row">
                     <div class="col-md-5">
                       <h4>About Me</h4>
-                      <h4>Job</h4>
                     </div>
                     <div class="col-md-7">
                       <h4 class="account-heading">Skills</h4>
@@ -86,7 +84,7 @@
                     </div>
                   </div>
                 </div>
-                <!-----------------------------------------------------------------PROFILE TAB END--------------------------------->
+                <!-- ---------------------------------------------------------------PROFILE TAB END------------------------------- -->
                 <div id="vehicles-tab">
                   <div class="row tab-row">
                     <div class="col-md-7">
@@ -329,6 +327,12 @@
     </div>
   </div>
   <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
+  <div id="manual-tile" class="item w3 h3">
+  </div>
+  <div id="shop-tile" class="item w3 h3">
+  </div>
+  <div id="video-tile" class="item w3 h3">
+  </div>
   <div id="search-tile" class="item w3 h3" >
     <div class="row center-block search-row">
       <div class="col-md-12">
@@ -397,12 +401,6 @@
     </div>
   </div>
   <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
-  <div id="manual-tile" class="item w3 h3">
-  </div>
-  <div id="shop-tile" class="item w3 h3">
-  </div>
-  <div id="video-tile" class="item w3 h3">
-  </div>
 </div>
 <!-- ----------PACKERY END---------- -->
 <footer class="footer">
@@ -412,26 +410,17 @@
       <div class="navbar-header">
         <a class="navbar-brand" href="#"><span id="qspan">Q</span>uix</a>
       </div>
-    </div>
-    <!-- /.container-fluid -->
-    <!-- --------------------------------------------------MODAL BEGIN------------------------------------------- -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 pull-right" id="manage-vehicles">
+    </div>    <!-- /.container-fluid -->
   </nav>
 </footer>
 <script src="js/jquery-2.1.4.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.js"></script>
 <script src="http://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
-<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/packery-docs.min.js"></script>
-<!--<script src="js/packery.pkgd.js"></script>-->
 <script src="js/packery.pkgd.min.js"></script>
 <script src="js/default.js"></script>
 <script src="js/form.js"></script>
 </body>
-
 </html>

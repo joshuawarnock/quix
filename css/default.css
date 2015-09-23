@@ -2,7 +2,6 @@
 ************************************MAIN CSS*************************************
 ********************************************************************************/
 body{
-    /*background-image: url("../images/race-day-bw.jpg");*/
     background-color: #1A1A1A;
 }
 .packery{
@@ -11,7 +10,6 @@ body{
 .mynavbar-header{
     margin: 0px auto;
     border: 0px;
-    /*border-color: hsla(0, 0%, 0%, 0.3);*/
     border-radius: 0px;
     background: #1A1A1A;
 }
@@ -32,6 +30,10 @@ body{
     height: 100%;
     width: auto;
     padding: 10px 10px 10px 10px;
+}
+.expand-img{
+    width: 20px;
+    height: auto;
 }
 /********************************************************************************
 ************************************PACKERY*************************************
@@ -77,6 +79,7 @@ body { font-family: sans-serif; }
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: center;
+    overflow-x: auto;
 }
 #vehicle-tile{
     display: block;
@@ -129,9 +132,9 @@ body { font-family: sans-serif; }
     display: none;
 }
 #profile-image{
-    width: 90%;
-    height: auto;
-    margin-top: 15%;
+    max-width: 90%;
+    max-height: auto;
+    margin-top: 5%;
 }
 #profile-details{
     margin-left: 10%;
@@ -141,10 +144,6 @@ body { font-family: sans-serif; }
     height: auto;
     margin: 5px 5px 5px 0px;
 }
-.general-info{
-    margin-bottom: -5%;
-}
-
 #friends-tab{
     box-sizing: border-box;
 }
@@ -196,6 +195,8 @@ body { font-family: sans-serif; }
 }
 .return-title{
     font-size: 24px;
+    color: #262626;
+    font-weight: 900;
 }
 .return-link{
     text-decoration: underline;
