@@ -55,7 +55,9 @@ grabbedList.addEventListener('click', function(theEvent){
   checkTheclick(content);
 },false);
 function checkTheclick(contentId){
+
   var section = document.getElementById(contentId);
+  console.log(section.style.display);
   if (section.style.display == 'block') {
     section.style.display = 'none';
   } else if (section.style.display == 'none' || section.style.display == '') {
@@ -106,7 +108,7 @@ VehicleSubmitButton.addEventListener('click', function(event){
 //},false);
 // Vehicle Selector Display Selection--------------------------------------|
 
-// Soon to be account Hide/Show-----------------------------|
+// Account Hide/Show-----------------------------|
 var AccountTile = document.getElementById('account-tile');
 AccountTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
@@ -120,7 +122,114 @@ function AccountShow(contentId){
     section.style.display = 'block';
   }
 }
-// Soon to be account Hide/Show-----------------------------|
+// Account Hide/Show-----------------------------|
+var ProfileButton = document.getElementById('profile-button');
+var VehicleButton = document.getElementById('vehicle-button');
+var ProjectsButton = document.getElementById('projects-button');
+var FriendsButton = document.getElementById('friends-button');
+var PhotosButton = document.getElementById('photos-button');
+
+function ShowProfile(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+function ShowVehicle(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+function ShowProjects(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+function ShowFriends(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+function ShowPhotos(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+ProfileButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  ShowProfile(content);
+},false);
+VehicleButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  ShowVehicle(content);
+},false);
+ProjectsButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  ShowProjects(content);
+},false);
+FriendsButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  ShowFriends(content);
+},false);
+PhotosButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  ShowPhotos(content);
+},false);
+
+//$("#profile-button").click(function () {
+//  $("profile-tab").show("slow");
+//
+//  $("vehicles-tab").hide("slow");
+//  $("projects-tab").hide("slow");
+//  $("friends-tab").hide("slow");
+//  $("photos-tab").hide("slow");
+//});
+//$("#vehicles-button").click(function () {
+//  $("vehicles-tab").show("slow");
+//
+//  $("profile-tab").hide("slow");
+//  $("projects-tab").hide("slow");
+//  $("friends-tab").hide("slow");
+//  $("photos-tab").hide("slow");
+//});
+//$("#projects-button").click(function () {
+//  $("projects-tab").show("slow");
+//
+//  $("profile-tab").hide("slow");
+//  $("vehicles-tab").hide("slow");
+//  $("friends-tab").hide("slow");
+//  $("photos-tab").hide("slow");
+//});
+//$("#friends-button").click(function () {
+//  $("friends-tab").show("slow");
+//
+//  $("profile-tab").hide("slow");
+//  $("vehicles-tab").hide("slow");
+//  $("projects-tab").hide("slow");
+//  $("photos-tab").hide("slow");
+//});
+//$("#photos-button").click(function () {
+//  $("photos-tab").show("slow");
+//
+//  $("profile-tab").hide("slow");
+//  $("vehicles-tab").hide("slow");
+//  $("projects-tab").hide("slow");
+//  $("friends-tab").hide("slow");
+//});
 
 
 // Breadcrumb Selector ------------------------------------------|
