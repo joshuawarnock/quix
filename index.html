@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <title>quix</title>
-  <link rel="stylesheet" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quix</title>
   <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
   <link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
   <link href="css/jquery-ui.css" type="text/css" rel="stylesheet">
@@ -14,7 +12,6 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/default.css" type="text/css" rel="stylesheet">
 </head>
-
 <body>
 <!-- -----------------------------------HEADER TILE BEGIN-------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top mynavbar-header">
@@ -38,15 +35,13 @@
         <li><a id="search-button" data-content="search-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-search-plus"></i> Search</a></li>
       </ul>
       <div id="vehicle-selection"></div>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container-fluid -->
+    </div>   <!-- /.navbar-collapse -->
+  </div>   <!-- /.container-fluid -->
 </nav>
 <div class="packery">
   <!-- ----------PACKERY BEGIN-------------->
   <div id="account-tile" data-content="account-container" class="item w3 h3">
-
+    <div class="tile-expand"></div>
     <div id="account-container" class="container">
       <div class="row">
         <div class="col-md-10">
@@ -161,45 +156,8 @@
         </div>
       </div>
     </div>
-
-    <!--<div class="row">-->
-
-      <!--<div class="col-md-3">-->
-        <!--<div class="row">-->
-
-          <!--<div class="col-md-12 text-center">-->
-            <!--<div id="account-button-group" class="btn-group" role="group" aria-label="...">-->
-              <!--<button type="button" class="btn btn-default">Profile</button>-->
-              <!--<button type="button" class="btn btn-default">Vehicles</button>-->
-              <!--<button type="button" class="btn btn-default">Projects</button>-->
-              <!--<button type="button" class="btn btn-default">Friends</button>-->
-              <!--<button type="button" class="btn btn-default">Photos</button>-->
-            <!--</div>-->
-          <!--</div>-->
-
-          <!--<div class="col-md-2">-->
-            <!--<img id="profile-image" src="images/blank-profile.jpg">-->
-            <!--<ul class="profile-details">-->
-              <!--<li class="general-info"><h5><i class="fa fa-user"></i> Weekend-Warrior</h5></li>-->
-              <!--<li class="general-info"><h5><i class="fa fa-map-marker"></i> Irvine, CA</h5></li>-->
-              <!--<li class="general-info"><h5><i class="fa fa-envelope"></i> WWarrior@gmail.com</h5></li>-->
-            <!--</ul>-->
-          <!--</div>-->
-
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<div class="row">-->
-        <!--<div class="col-md-9">-->
-          <!--<h5>About Me</h5>-->
-        <!--</div>-->
-      <!--</div>-->
-
-    <!--</div>-->
   </div>
-
   <div id="vehicle-tile" data-content="vehicle-selector" class="item w3 h3">
-
     <div id="vehicle-selector">
       <div class="row">
         <div class="col-md-12">
@@ -370,79 +328,6 @@
       </div>
     </div>
   </div>
-  <!-- -----------------------------------CAROUSEL TILE BEGIN----------------------------------- -->
-  <!--<div class="item w4 h2">-->
-
-  <!--<div id="carousel-tile" class="carousel slide" data-ride="carousel">-->
-  <!--<ol class="carousel-indicators">-->
-  <!--<li data-target="#carousel-tile" data-slide-to="0" class="active"></li>-->
-  <!--<li data-target="#carousel-tile" data-slide-to="1"></li>-->
-  <!--<li data-target="#carousel-tile" data-slide-to="2"></li>-->
-  <!--</ol>-->
-
-  <!--&lt;!&ndash; Wrapper for slides &ndash;&gt;-->
-  <!--<div class="carousel-inner" role="listbox">-->
-
-  <!--<div class="slide active">-->
-  <!--<img class="slide-image" src="images/FZ1.jpg" alt="Chania">-->
-  <!--<div class="carousel-caption">-->
-  <!--<h3>Slide One</h3>-->
-  <!--<p>Slide One Slide One Slide One Slide One</p>-->
-  <!--</div>-->
-  <!--</div>-->
-
-  <!--<div class="slide">-->
-  <!--<img class="slide-image" src="images/dogs1.jpg" alt="Chania">-->
-  <!--<div class="carousel-caption">-->
-  <!--<h3>Slide Two</h3>-->
-  <!--<p>Slide Two Slide Two Slide Two Slide Two Slide Two</p>-->
-  <!--</div>-->
-  <!--</div>-->
-
-  <!--<div class="slide">-->
-  <!--<img class="slide-image" src="images/Gorgeous_puppies.jpg" alt="Flower">-->
-  <!--<div class="carousel-caption">-->
-  <!--<h3>Slide Three</h3>-->
-  <!--<p>Slide Three Slide Three Slide Three Slide Three</p>-->
-  <!--</div>-->
-  <!--</div>-->
-
-
-  <!--</div>-->
-
-  <!--&lt;!&ndash; Left and right controls &ndash;&gt;-->
-  <!--<a class="left carousel-control" href="#carousel-tile" role="button" data-slide="prev">-->
-  <!--<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
-  <!--<span class="sr-only">Previous</span>-->
-  <!--</a>-->
-  <!--<a class="right carousel-control" href="#carousel-tile" role="button" data-slide="next">-->
-  <!--<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
-  <!--<span class="sr-only">Next</span>-->
-  <!--</a>-->
-  <!--</div>-->
-
-  <!--</div>-->
-  <!-- -----------------------------------CAROUSEL TILE END----------------------------------- -->
-  <!-- -----------------------------------SIGNIN TILE BEGIN----------------------------------- -->
-  <!--<div class="item w3 h3">-->
-  <!--<div class="input-group signin-group center-block">-->
-  <!--&lt;!&ndash;<form>&ndash;&gt;-->
-  <!--<div class="input-group text-center">-->
-  <!--<h3>Sign-In</h3>-->
-  <!--<div class="input-group">-->
-  <!--<input id="emailinput" type="text" class="form-control signin-input" placeholder="E-mail">-->
-  <!--</div>-->
-  <!--<div class="input-group">-->
-  <!--<input id="passwordinput" type="text" class="form-control signin-input" placeholder="Password" aria-describedby="basic-addon2">-->
-  <!--</div>-->
-  <!--<button id="thesigninbutton" type="submit" class="btn btn-default">Sign In</button>-->
-  <!--<div id="empty-username-div"></div>-->
-  <!--<div id="empty-password-div"></div>-->
-  <!--</div>-->
-  <!--&lt;!&ndash;</form>&ndash;&gt;-->
-  <!--</div>-->
-  <!--</div>-->
-  <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
   <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
   <div id="search-tile" class="item w3 h3" >
     <div class="row center-block search-row">
@@ -513,13 +398,10 @@
   </div>
   <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
   <div id="manual-tile" class="item w3 h3">
-    <!--<img class="tile-image" src="images/manual-icon-tran.png">-->
   </div>
   <div id="shop-tile" class="item w3 h3">
-    <!--<img class="tile-image" src="images/parts-shopping-icon.png">-->
   </div>
   <div id="video-tile" class="item w3 h3">
-    <!--<img class="tile-image" src="images/play-icon.png">-->
   </div>
 </div>
 <!-- ----------PACKERY END---------- -->
@@ -536,96 +418,17 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3 pull-right" id="manage-vehicles">
-          <!-- ----------------------MY VEHICLE WINDOW BEGIN----------------------- -->
-          <div id="myModal" class="modal fade" role="form" aria-labelledby="gridSystemModalLabel">
-            <div class="modal-body">
-              <div class="modal-content container-fluid modal-area">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Select Vehicle</h4>
-                </div>
-                <div class="modal-body">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <!-- ------------------------BREADCRUMB BEGIN----------------------- -->
-                      <ul class="btn-group btn-breadcrumbs" id="breadcrumbs" role="menubar" aria-label="breadcrumb">
-                        <li role="menuitem"><a id="year-crumb" class="btn btn-sm" data-toggle="year" href="#">Year</a>
-                        </li>
-                        <li role="menuitem"><a id="make-crumb" class="btn btn-sm" data-toggle="make" href="#">Make</a>
-                        </li>
-                        <li role="menuitem"><a id="model-crumb" class="btn btn-sm" data-toggle="model" href="#">Model</a>
-                        </li>
-                        <li role="menuitem"><a id="edition-crumb" class="btn btn-sm" data-toggle="edition" href="#">Edition</a>
-                        </li>
-                      </ul>
-                      <!-- ------------------------BREADCRUMB END----------------------- -->
-                    </div>
-                    <div class="col-md-12">
-                      <div class="dropdown modal-dropdowns">
-                        <form>
-                          <select id="year" name="year">
-                            <option value="2015">Year</option>
-                            <option value="2015">2015</option>
-                            <option value="2014">2014</option>
-                            <option value="2013">2013</option>
-                            <option value="2012">2012</option>
-                            <option value="2011">2011</option>
-                            <option value="2010">2010</option>
-                          </select>
-                          <select id="make" name="make">
-                            <option value="Make">Make</option>
-                            <option value="Honda">Honda</option>
-                            <option value="Toyota">Toyota</option>
-                            <option value="Tesla">Tesla</option>
-                            <option value="Acura">Acura</option>
-                            <option value="Chevy">Chevy</option>
-                            <option value="BMW">BMW</option>
-                          </select>
-                          <select id="model" name="model">
-                            <option value="Model">Model</option>
-                            <option value="Accord">Accord</option>
-                            <option value="CRV">CRV</option>
-                            <option value="Pilot">Pilot</option>
-                            <option value="XRV">XRV</option>
-                            <option value="Odyssey">Odyssey</option>
-                            <option value="SXV">SXV</option>
-                          </select>
-                          <select id="edition" name="edition">
-                            <option value="Edition">Edition</option>
-                            <option value="SX">SX</option>
-                            <option value="LX">LX</option>
-                            <option value="FX">FX</option>
-                            <option value="EX">EX</option>
-                            <option value="Hybrid">Hybrid</option>
-                            <option value="Electric">Electric</option>
-                          </select>
-                        </form>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-default btn-sm modal-btn" data-category="modal">Save</button>
-                  <button type="button" class="btn btn-default btn-sm modal-btn" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </nav>
 </footer>
-
 <script src="js/jquery-2.1.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/packery/1.4.3/packery.pkgd.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/draggabilly/1.2.0/draggabilly.pkgd.js"></script>
 <script src="http://draggabilly.desandro.com/draggabilly.pkgd.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/packery-docs.min.js"></script>
-<script src="js/packery.pkgd.js"></script>
+<!--<script src="js/packery.pkgd.js"></script>-->
 <script src="js/packery.pkgd.min.js"></script>
 <script src="js/default.js"></script>
 <script src="js/form.js"></script>

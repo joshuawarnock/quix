@@ -44,8 +44,6 @@ body{
 body { font-family: sans-serif; }
 
 .packery {
-    /*background: #FDD;*/
-    /*background: hsla(45, 100%, 40%, 0.2);*/
     background: #1A1A1A;
 }
 /* clearfix */
@@ -67,23 +65,6 @@ body { font-family: sans-serif; }
     border-color: white;
     cursor: move;
 }
-/*.item.wall{ width: 100%; background: #1A1A1A }*/
-/*.item.hall{height:50px; background: #1A1A1A }*/
-/*.item.w1{ width:100px; background: #1A1A1A; }*/
-/*.item.h1{ height:100px; background: #1A1A1A; }*/
-/*.item.w1-5{ width:150px; background: #1A1A1A; }*/
-/*.item.h1-5{ height:150px; background: #1A1A1A; }*/
-/*.item.w2{ width: 200px; background: teal; }*/
-/*.item.h2{ height: 200px; background: teal; }*/
-/*.item.w3{ width:  300px; background: teal; }*/
-/*.item.h3{ height: 300px; background: teal; }*/
-/*.item.h4{ height: 400px; background: #1A1A1A; }*/
-/*.item.w4{ width: 400px; background: #1A1A1A; }*/
-/*.item.h5{ height: 500px; background: #1A1A1A; }*/
-/*.item.w5{ width: 500px; background: #1A1A1A; }*/
-/*.item.h6{ height: 600px; background: #1A1A1A; }*/
-/*.item.w6{ width: 600px; background: #1A1A1A; }*/
-
 .item.is-dragging,
 .item.is-positioning-post-drag {
     border-color: white;
@@ -150,6 +131,7 @@ body { font-family: sans-serif; }
 #profile-image{
     width: 90%;
     height: auto;
+    margin-top: 15%;
 }
 #profile-details{
     margin-left: 10%;
@@ -202,17 +184,6 @@ body { font-family: sans-serif; }
     margin: 5px auto;
     border-radius: 5px !important;
 }
-/********************************************************************************
-************************************CAROUSEL*************************************
-********************************************************************************/
-/*#carousel-tile{*/
-    /*height: 100%;*/
-    /*overflow: hidden;*/
-/*}*/
-/*.slide-image{*/
-    /*height: 100%;*/
-    /*width: auto;*/
-/*}*/
 /********************************************************************************
 ************************************SEARCH***************************************
 ********************************************************************************/
@@ -315,8 +286,6 @@ ul{
 }
 .dropdowns{
     margin-top: 5%;
-    /*margin-left: 5%;*/
-    /*margin-right: 5%;*/
 }
 .buttons{
     margin-top: 5%;
