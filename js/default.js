@@ -35,19 +35,6 @@ $( function() {
   });
 });
 // Packery setup------------------------------------------------------------------|
-// Search Tile Expand and Listener-------------------------------|
-var TheSearchButton = document.getElementById('thesearchbutton');
-function ResultResize(){
-  var ResultBox = document.getElementById('search-tile');
-  ResultBox.style.height = '1500px';
-  ResultBox.style.width = '100%';
-}
-TheSearchButton.addEventListener('click',function(e){
-  e.preventDefault();
-  var UserSearchClick = document.getElementById('return1title');
-  ResultResize(TheSearchInput.value);
-},false);
-// Search Tile Expand and Listener-------------------------------|
 // Tile Hide/Show-------------------------------------------|
 var grabbedList = document.getElementById('nav-list');
 grabbedList.addEventListener('click', function(theEvent){
@@ -55,59 +42,16 @@ grabbedList.addEventListener('click', function(theEvent){
   checkTheclick(content);
 },false);
 function checkTheclick(contentId){
-
   var section = document.getElementById(contentId);
-  console.log(section.style.display);
-  if (section.style.display == 'block') {
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  console.log(elStyle);
+  if (elStyle == 'block') {
     section.style.display = 'none';
-  } else if (section.style.display == 'none' || section.style.display == '') {
+  } else if (elStyle == 'none' || section.style.display == '') {
     section.style.display = 'block';
   }
 }
 // Tile Hide/Show-------------------------------------------|
-// Vehicle Selector Hide/Show-----------------------------|
-var VehicleTile = document.getElementById('vehicle-tile');
-VehicleTile.addEventListener('dblclick', function(theEvent){
-  var content = theEvent.target.getAttribute('data-content');
-  SelectorShow(content);
-},false);
-function SelectorShow(contentId){
-  var section = document.getElementById(contentId);
-  if (section.style.display == 'block') {
-    section.style.display = 'none';
-  } else if (section.style.display == 'none' || section.style.display == '') {
-    section.style.display = 'block';
-  }
-}
-// Vehicle Selector Hide/Show-----------------------------|
-// Vehicle Selector Display Selection--------------------------------------|
-var VehicleSubmitButton = document.getElementById('vehicle-submit-button');
-var VehicleCancelButton = document.getElementById('vehicle-cancel-button');
-
-function VehicleSelection(){
-  var VehicleDisplay = document.getElementById('vehicle-selection');
-  var VehicleYear = document.getElementById('year');
-  var VehicleMake = document.getElementById('make');
-  var VehicleModel = document.getElementById('model');
-  var VehicleEdition = document.getElementById('edition');
-  var VehicleEngine = document.getElementById('engine');
-  VehicleDisplay.textContent = 'Current Vehicle: ' + VehicleYear.value + ' ' + VehicleMake.value + ' ' + VehicleModel.value + ' ' + VehicleEdition.value + ' ' + VehicleEngine.value;
-}
-//function VehicleSelectionCancel(){
-//  var VehicleTile = document.getElementById('vehicle-tile');
-//  VehicleTile.className = 'item w3 h3';
-//}
-VehicleSubmitButton.addEventListener('click', function(event){
-  var content = event.target.getAttribute('data-content');
-  event.preventDefault();
-  VehicleSelection(content);
-},false);
-//VehicleCancelButton.addEventListener('click', function(event){
-//  event.preventDefault();
-//  VehicleSelectionCancel()
-//},false);
-// Vehicle Selector Display Selection--------------------------------------|
-
 // Account Hide/Show-----------------------------|
 var AccountTile = document.getElementById('account-tile');
 AccountTile.addEventListener('dblclick', function(theEvent){
@@ -230,6 +174,50 @@ PhotosButton.addEventListener('click', function(event){
 //  $("projects-tab").hide("slow");
 //  $("friends-tab").hide("slow");
 //});
+// Vehicle Selector Hide/Show-----------------------------|
+var VehicleTile = document.getElementById('vehicle-tile');
+VehicleTile.addEventListener('dblclick', function(theEvent){
+  var content = theEvent.target.getAttribute('data-content');
+  SelectorShow(content);
+},false);
+function SelectorShow(contentId){
+  var section = document.getElementById(contentId);
+  if (section.style.display == 'block') {
+    section.style.display = 'none';
+  } else if (section.style.display == 'none' || section.style.display == '') {
+    section.style.display = 'block';
+  }
+}
+// Vehicle Selector Hide/Show-----------------------------|
+// Vehicle Selector Display Selection--------------------------------------|
+var VehicleSubmitButton = document.getElementById('vehicle-submit-button');
+var VehicleCancelButton = document.getElementById('vehicle-cancel-button');
+
+function VehicleSelection(){
+  var VehicleDisplay = document.getElementById('vehicle-selection');
+  var VehicleYear = document.getElementById('year');
+  var VehicleMake = document.getElementById('make');
+  var VehicleModel = document.getElementById('model');
+  var VehicleEdition = document.getElementById('edition');
+  var VehicleEngine = document.getElementById('engine');
+  VehicleDisplay.textContent = 'Current Vehicle: ' + VehicleYear.value + ' ' + VehicleMake.value + ' ' + VehicleModel.value + ' ' + VehicleEdition.value + ' ' + VehicleEngine.value;
+}
+//function VehicleSelectionCancel(){
+//  var VehicleTile = document.getElementById('vehicle-tile');
+//  VehicleTile.className = 'item w3 h3';
+//}
+VehicleSubmitButton.addEventListener('click', function(event){
+  var content = event.target.getAttribute('data-content');
+  event.preventDefault();
+  VehicleSelection(content);
+},false);
+//VehicleCancelButton.addEventListener('click', function(event){
+//  event.preventDefault();
+//  VehicleSelectionCancel()
+//},false);
+// Vehicle Selector Display Selection--------------------------------------|
+
+
 
 
 // Breadcrumb Selector ------------------------------------------|
@@ -278,6 +266,22 @@ $('#engine').change( function(){
 //  var frontCrumb = document.getElementById('first-crumb');
 //  frontCrumb.text = selectedFront;
 //});
+
+// Search Tile Expand and Listener-------------------------------|
+var TheSearchButton = document.getElementById('thesearchbutton');
+function ResultResize(){
+  var ResultBox = document.getElementById('search-tile');
+  ResultBox.style.height = '1500px';
+  ResultBox.style.width = '100%';
+}
+TheSearchButton.addEventListener('click',function(e){
+  e.preventDefault();
+  var UserSearchClick = document.getElementById('return1title');
+  ResultResize(TheSearchInput.value);
+},false);
+// Search Tile Expand and Listener-------------------------------|
+
+
 
 //$(document).ready(function() {
 //  $('#carousel-tile').carousel({
