@@ -61,96 +61,23 @@ function AccountShow(contentId){
     section.style.display = 'block';
   }
 }
-
-
+// Account Tab Hide/Show-----------------------------|
 var accountButtons = document.getElementById('account-button-group');
-
-
-function showTab(idInfo) {
-  var sel = document.getElementById('account-button-group').getElementsByTagName('div');
-  for (var i=0; i<sel.length; i++) {
-    sel[i].style.display = 'none';
+function showTab(contentId) {
+  var theDiv = document.getElementById(contentId);
+  var restDivs = ['profile-tab', 'vehicles-tab', 'projects-tab', 'friends-tab', 'photos-tab'];
+  for (var i = 0; i < restDivs.length; i++){
+    if (theDiv != document.getElementById(restDivs[i])){
+      document.getElementById(restDivs[i]).style.display = 'none';
+    }
   }
-  document.getElementById('container'+idInfo).style.display = 'block';
+  console.log(theDiv);
+  theDiv.style.display = 'block';
 }
-
 accountButtons.addEventListener('click', function(){
-  showTab();
+  var content = event.target.getAttribute('data-content');
+  showTab(content);
 });
-
-
-
-// Account Slides Hide/Show-----------------------------|
-var ProfileButton = document.getElementById('profile-button');
-var VehicleButton = document.getElementById('vehicle-button');
-var ProjectsButton = document.getElementById('projects-button');
-var FriendsButton = document.getElementById('friends-button');
-var PhotosButton = document.getElementById('photos-button');
-function ShowProfile(contentId){
-  var section = document.getElementById(contentId);
-  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  if (elStyle == 'block') {
-    section.style.display = 'none';
-  } else if (elStyle == 'none' || elStyle == '') {
-    section.style.display = 'block';
-  }
-}
-function ShowVehicle(contentId){
-  var section = document.getElementById(contentId);
-  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  if (elStyle == 'block') {
-    section.style.display = 'none';
-  } else if (elStyle == 'none' || elStyle == '') {
-    section.style.display = 'block';
-  }
-}
-function ShowProjects(contentId){
-  var section = document.getElementById(contentId);
-  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  if (elStyle == 'block') {
-    section.style.display = 'none';
-  } else if (elStyle == 'none' || elStyle == '') {
-    section.style.display = 'block';
-  }
-}
-function ShowFriends(contentId){
-  var section = document.getElementById(contentId);
-  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  if (elStyle == 'block') {
-    section.style.display = 'none';
-  } else if (elStyle == 'none' || elStyle == '') {
-    section.style.display = 'block';
-  }
-}
-function ShowPhotos(contentId){
-  var section = document.getElementById(contentId);
-  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  if (elStyle == 'block') {
-    section.style.display = 'none';
-  } else if (elStyle == 'none' || elStyle == '') {
-    section.style.display = 'block';
-  }
-}
-ProfileButton.addEventListener('click', function(event){
-  var content = event.target.getAttribute('data-content');
-  ShowProfile(content);
-},true);
-VehicleButton.addEventListener('click', function(event){
-  var content = event.target.getAttribute('data-content');
-  ShowVehicle(content);
-},true);
-ProjectsButton.addEventListener('click', function(event){
-  var content = event.target.getAttribute('data-content');
-  ShowProjects(content);
-},true);
-FriendsButton.addEventListener('click', function(event){
-  var content = event.target.getAttribute('data-content');
-  ShowFriends(content);
-},true);
-PhotosButton.addEventListener('click', function(event){
-  var content = event.target.getAttribute('data-content');
-  ShowPhotos(content);
-},true);
 // Vehicle Selector Hide/Show-----------------------------|
 var VehicleTile = document.getElementById('vehicle-tile');
 VehicleTile.addEventListener('dblclick', function(theEvent){
