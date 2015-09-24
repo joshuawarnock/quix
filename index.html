@@ -43,22 +43,22 @@
   <div id="account-tile" data-content="account-container" class="item w3 h3 light">
     <div id="account-container" class="container">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-10">
           <div class="row profile">
-            <div class="col-sm-3">
+            <div class="col-md-3">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-md-12">
                   <img id="profile-image" src="images/weekend-warrior.gif">
+                  <ul id="profile-details">
+                    <li class="general-info"><h5><i class="fa fa-user"></i> Weekend-Warrior</h5></li>
+                    <li class="general-info"><h5><i class="fa fa-map-marker"></i> Irvine, CA</h5></li>
+                    <li class="general-info"><h5><i class="fa fa-envelope"></i> WWarrior@gmail.com</h5></li>
+                  </ul>
                 </div>
-                <ul id="profile-details">
-                  <li class="general-info"><h5><i class="fa fa-user"></i> Weekend-Warrior</h5></li>
-                  <li class="general-info"><h5><i class="fa fa-map-marker"></i> Irvine, CA</h5></li>
-                  <li class="general-info"><h5><i class="fa fa-envelope"></i> WWarrior@gmail.com</h5></li>
-                </ul>
               </div>
             </div>
-            <!-----------------------------TABS------------------------------------>
-            <div class="col-md-6">
+            <!-- ---------------------------TABS---------------------------------- -->
+            <div class="col-md-9">
               <div id="account-button-group" class="btn-group" role="group" aria-label="...">
                 <button id="profile-button" data-content="profile-tab" type="button" class="btn btn-default">Profile</button>
                 <button id="vehicles-button" data-content="vehicles-tab" type="button" class="btn btn-default">Vehicles</button>
@@ -70,15 +70,17 @@
                 <!-----------------------------------------------------------------PROFILE TAB BEGIN------------------------------->
                 <div id="profile-tab">
                   <div class="row tab-row">
-                    <div class="col-md-5">
-                      <h4>About Me</h4>
+                    <div class="col-md-6">
+                      <h4 class="account-header">About Me</h4>
+                      <p class="account-paragraph">I am the quintessential weekend warrior. I have been working on my own cars out of necessity,
+                      pride, and joy. Im here to get my fx and get stuff done.</p>
                     </div>
-                    <div class="col-md-7">
-                      <h4 class="account-heading">Skills</h4>
+                    <div class="col-md-6">
+                      <h4 class="account-header">Skills</h4>
                       <ul class="skill-bar">
                         <li>
-                          <h5>Spark Plug Replacement</h5>
-                          <h5>'09 Yamaha FZ1</h5>
+                          <p class="account-paragraph">Spark Plug Replacement</p>
+                          <p class="account-paragraph">'09 Yamaha FZ1</p>
                         </li>
                       </ul>
                     </div>
@@ -87,8 +89,8 @@
                 <!-- ---------------------------------------------------------------PROFILE TAB END------------------------------- -->
                 <div id="vehicles-tab">
                   <div class="row tab-row">
-                    <div class="col-md-7">
-                      <h4 class="account-heading">My Vehicles</h4>
+                    <div class="col-md-10">
+                      <h4 class="account-header">My Vehicles</h4>
                       <ul class="vehicles-bar">
                         <li><h5>'99 Honda Accord</h5></li>
                         <li><h5>'15 Honda CRV</h5></li>
@@ -99,9 +101,13 @@
                 </div>
                 <div id="projects-tab">
                   <div class="row tab-row">
-                    <div class="col-md-5">
-                      <h4>Projects</h4>
-                      <h5>Lorem ipsum</h5>
+                    <div class="col-md-10">
+                      <h4 class="account-header">Projects</h4>
+                      <ul>
+                        <li><p class="account-paragraph">Rear Bearing Replacement</p></li>
+                        <li><p class="account-paragraph">Front Passenger CV Joint Replacement</p></li>
+                        <li><p class="account-paragraph">Spak Plug Change</p></li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -110,41 +116,47 @@
                     <div class="col-md-12">
                       <ul class="friends-list list-inline">
                         <li>
-                          <a class="avatar" href="#"><img src="images/blank-profile.jpg"></a>
-                          <div id="friend-name">Luke Skywalker</div>
-                          <span class="label label-info">Info</span>
-                          <span class="label label-success">active</span>
-                          <a href="#" class="fa fa-facebook-square"></a>
-                          <a href="#" class="fa fa-twitter-square"></a>
-                          <a href="#" class="fa fa-linkedin-square"></a>
+                          <a class="avatar" href="#"><img src="images/luke-skywalker.jpg"></a>
+                          <div class="friend-name">Luke Skywalker</div>
+                          <span class="label label-info friend-label">Info</span>
+                          <span class="label label-success friend-label">Active</span>
+                          <a href="#" class="fa fa-facebook social-button"></a>
+                          <a href="#" class="fa fa-twitter-square social-button"></a>
+                          <a href="#" class="fa fa-linkedin-square social-button"></a>
                         </li>
                         <li>
-                          <a class="avatar" href="#"><img src="images/blank-profile.jpg"></a>
-                          <div>Roman Mars</div>
-                          <span class="label label-info">Info</span>
-                          <span class="label label-warning">busy</span>
-                          <a href="#" class="fa fa-facebook-square"></a>
-                          <a href="#" class="fa fa-twitter-square"></a>
-                          <a href="#" class="fa fa-linkedin-square"></a>
+                          <a class="avatar" href="#"><img src="images/marvin-martian.gif"></a>
+                          <div class="friend-name">Roman Mars</div>
+                          <span class="label label-info friend-label">Info</span>
+                          <span class="label label-warning friend-label">Busy</span>
+                          <a href="#" class="fa fa-facebook-square social-button"></a>
+                          <a href="#" class="fa fa-twitter-square social-button"></a>
+                          <a href="#" class="fa fa-linkedin-square social-button"></a>
                         </li>
                         <li>
-                          <a class="avatar" href="#"><img src="images/blank-profile.jpg"></a>
-                          <div>May Linger</div>
-                          <span class="label label-info">Info</span>
-                          <span class="label label-danger">blocked</span>
-                          <a href="#" class="fa fa-facebook-square"></a>
-                          <a href="#" class="fa fa-twitter-square"></a>
-                          <a href="#" class="fa fa-linkedin-square"></a>
+                          <a class="avatar" href="#"><img src="images/joe-banks.jpg"></a>
+                          <div class="friend-name">Joe Banks</div>
+                          <span class="label label-info friend-label">Info</span>
+                          <span class="label label-success friend-label">Active</span>
+                          <a href="#" class="fa fa-facebook-square social-button"></a>
+                          <a href="#" class="fa fa-twitter-square social-button"></a>
+                          <a href="#" class="fa fa-linkedin-square social-button"></a>
                         </li>
                       </ul>
                     </div>
                   </div>
                 </div>
                 <div id="photos-tab">
-                  <div class="row tab-row">
+                  <div class="row">
                     <div class="col-md-12">
-                      <div><img class="photo-thumbnail" id="photo-thumbnail" src="images/blank-profile.jpg"></div>
-                      <div><img class="photo-thumbnail" id="photo-thumbnail" src="images/blank-profile.jpg"></div>
+                      <img class="photo-thumbnail" src="images/FZ1.jpg">
+                      <img class="photo-thumbnail" src="images/working-on-car.jpg">
+                      <img class="photo-thumbnail" src="images/odd-car-work.jpg">
+                      <img class="photo-thumbnail" src="images/exhaust.jpg">
+                      <img class="photo-thumbnail" src="images/rotor.png">
+                      <img class="photo-thumbnail" src="images/car-work-one.jpg">
+                      <img class="photo-thumbnail" src="images/car-work-two.jpg">
+                      <img class="photo-thumbnail" src="images/car-work-three.jpg">
                     </div>
                   </div>
                 </div>

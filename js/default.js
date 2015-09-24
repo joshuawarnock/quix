@@ -61,6 +61,25 @@ function AccountShow(contentId){
     section.style.display = 'block';
   }
 }
+
+
+var accountButtons = document.getElementById('account-button-group');
+
+
+function showTab(idInfo) {
+  var sel = document.getElementById('account-button-group').getElementsByTagName('div');
+  for (var i=0; i<sel.length; i++) {
+    sel[i].style.display = 'none';
+  }
+  document.getElementById('container'+idInfo).style.display = 'block';
+}
+
+accountButtons.addEventListener('click', function(){
+  showTab();
+});
+
+
+
 // Account Slides Hide/Show-----------------------------|
 var ProfileButton = document.getElementById('profile-button');
 var VehicleButton = document.getElementById('vehicle-button');
