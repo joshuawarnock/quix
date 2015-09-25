@@ -78,7 +78,7 @@ function SubmitSearch() {
 }
 function SearchFormData(){
   var SearchFormData = new Object();
-  SearchFormData.searchinput = document.forms[1].elements.searchinput.value;
+  SearchFormData.searchinput = document.forms[2].elements.searchinput.value;
   return JSON.stringify(SearchFormData);
 }
 TheSearchButton.addEventListener('click',function(e){

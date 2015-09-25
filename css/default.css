@@ -61,15 +61,6 @@ body { font-family: sans-serif; }
     border: 1px solid #333;
     border-color: hsla(0, 0%, 0%, 0.3);
     margin: 0px auto;
-    /*background: #7abcff !important; /!* Old browsers *!/*/
-    /*background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) ; /!* FF3.6+ *!/*/
-    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /!* Chrome,Safari4+ *!/*/
-    /*background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /!* Chrome10+,Safari5.1+ *!/*/
-    /*background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /!* Opera 11.10+ *!/*/
-    /*background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /!* IE10+ *!/*/
-    /*background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /!* W3C *!/*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ) ; /!* IE6-9 *!/*/
-
 }
 .item:hover {
     border-color: white;
@@ -240,39 +231,6 @@ body { font-family: sans-serif; }
     font-size: 14px;
 }
 /********************************************************************************
-************************************SIGNIN***************************************
-********************************************************************************/
-.signin-group{
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top:80px
-}
-.signin-input{
-    margin: 5px auto;
-    border-radius: 5px !important;
-}
-/********************************************************************************
-************************************SEARCH***************************************
-********************************************************************************/
-.search-row{
-    margin-top: 80px;
-}
-#search-return-area{
-    color: white;
-    padding: 10px 10px 10px 10px;
-}
-.return-title{
-    font-size: 24px;
-    color: #262626;
-    font-weight: 900;
-}
-.return-link{
-    text-decoration: underline;
-}
-.return-description{
-    font-size: 18px;
-}
-/********************************************************************************
 *******************************VEHICLE SELECTOR**********************************
 ********************************************************************************/
 #vehicle-selector{
@@ -359,7 +317,41 @@ ul{
 .buttons{
     margin-top: 5%;
 }
-
+/********************************************************************************
+**********************************DOCUMENTS**************************************
+********************************************************************************/
+.documents-container{
+    display: ;
+}
+.documents-row{
+    margin-top: 7%;
+    margin-left: 5%;
+}
+/********************************************************************************
+************************************SEARCH***************************************
+********************************************************************************/
+#search-container{
+    display: none;
+}
+.search-row{
+    margin-top: 7%;
+    margin-left: 5%;
+}
+#search-return-area{
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+.return-title{
+    font-size: 24px;
+    color: #262626;
+    font-weight: 900;
+}
+.return-link{
+    text-decoration: underline;
+}
+.return-description{
+    font-size: 18px;
+}
 
 
 

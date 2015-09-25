@@ -340,13 +340,31 @@
   </div>
   <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
   <div id="manual-tile" class="item w3 h3">
+    <div id="documents-container" class="documents-row">
+    <h3 class="text-center carousel-search-heading">Find Documents.</h3>
+    <form>
+      <div class="input-group stylish-input-group">
+        <div class="input-group-btn">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">Instructions</a></li>
+          <li><a href="#">Manuals</a></li>
+          <li><a href="#">Tips</a></li>
+          <li><a href="#">Articles</a></li>
+        </ul>
+          </div>
+        <input id="documentinput" type="text" class="form-control" placeholder="Search">
+        <span class="input-group-addon carousel-search-button"><button id="documentsearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
+      </div>
+    </form>
+    </div>
   </div>
   <div id="shop-tile" class="item w3 h3">
   </div>
   <div id="video-tile" class="item w3 h3">
   </div>
-  <div id="search-tile" class="item w3 h3" >
-    <div class="row center-block search-row">
+  <div id="search-tile" class="item w3 h3" data-content="search-container">
+    <div id="search-container" class="row center-block search-row">
       <div class="col-md-12">
         <div id="carousel-search-container">
           <h3 class="text-center carousel-search-heading">Find your fix.</h3>

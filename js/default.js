@@ -144,15 +144,31 @@ $('#engine').change( function(){
   var editionCrumb = document.getElementById('engine-crumb');
   editionCrumb.text = selectedEdition;
 });
-// Search Tile Expand and Listener-------------------------------|
-var TheSearchButton = document.getElementById('thesearchbutton');
-function ResultResize(){
-  var ResultBox = document.getElementById('search-tile');
-  ResultBox.style.height = '1500px';
-  ResultBox.style.width = '100%';
+//// Search Tile Expand and Listener-------------------------------|
+//var TheSearchButton = document.getElementById('thesearchbutton');
+//function ResultResize(){
+//  var ResultBox = document.getElementById('search-tile');
+//  ResultBox.style.height = '1500px';
+//  ResultBox.style.width = '100%';
+//}
+//TheSearchButton.addEventListener('click',function(e){
+//  e.preventDefault();
+//  var UserSearchClick = document.getElementById('return1title');
+//  ResultResize(TheSearchInput.value);
+//},false);
+
+// Search Container show/hide --------------------------|
+var SearchTile = document.getElementById('search-tile');
+function SearchShow(contentId){
+  var section = document.getElementById(contentId);
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  if (elStyle == 'block') {
+    section.style.display = 'none';
+  } else if (elStyle == 'none' || elStyle == '') {
+    section.style.display = 'block';
+  }
 }
-TheSearchButton.addEventListener('click',function(e){
-  e.preventDefault();
-  var UserSearchClick = document.getElementById('return1title');
-  ResultResize(TheSearchInput.value);
+SearchTile.addEventListener('dblclick', function(theEvent){
+  var content = theEvent.target.getAttribute('data-content');
+  SearchShow(content);
 },false);
