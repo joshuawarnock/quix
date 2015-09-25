@@ -39,7 +39,6 @@ grabbedList.addEventListener('click', function(theEvent){
 function checkTheclick(contentId){
   var section = document.getElementById(contentId);
   var elStyle = window.getComputedStyle(section).getPropertyValue('display');
-  console.log(elStyle);
   if (elStyle == 'block') {
     section.style.display = 'none';
   } else if (elStyle == 'none' || elStyle == '') {
@@ -47,12 +46,12 @@ function checkTheclick(contentId){
   }
 }
 // Account Hide/Show-----------------------------|
-var AccountTile = document.getElementById('account-tile');
-AccountTile.addEventListener('dblclick', function(theEvent){
+var accountTile = document.getElementById('account-tile');
+accountTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
-  AccountShow(content);
+  accountShow(content);
 });
-function AccountShow(contentId){
+function accountShow(contentId){
   var section = document.getElementById(contentId);
   var elStyle = window.getComputedStyle(section).getPropertyValue('display');
   if (elStyle == 'block') {
@@ -71,7 +70,6 @@ function showTab(contentId) {
       document.getElementById(restDivs[i]).style.display = 'none';
     }
   }
-  console.log(theDiv);
   theDiv.style.display = 'block';
 }
 accountButtons.addEventListener('click', function(){
@@ -79,12 +77,12 @@ accountButtons.addEventListener('click', function(){
   showTab(content);
 });
 // Vehicle Selector Hide/Show-----------------------------|
-var VehicleTile = document.getElementById('vehicle-tile');
-VehicleTile.addEventListener('dblclick', function(theEvent){
+var vehicleTile = document.getElementById('vehicle-tile');
+vehicleTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
-  SelectorShow(content);
+  selectorShow(content);
 },false);
-function SelectorShow(contentId){
+function selectorShow(contentId){
   var section = document.getElementById(contentId);
   if (section.style.display == 'block') {
     section.style.display = 'none';
@@ -93,20 +91,20 @@ function SelectorShow(contentId){
   }
 }
 // Vehicle Selector Display Selection--------------------------------------|
-var VehicleSubmitButton = document.getElementById('vehicle-submit-button');
-function VehicleSelection(){
-  var VehicleDisplay = document.getElementById('vehicle-selection');
-  var VehicleYear = document.getElementById('year');
-  var VehicleMake = document.getElementById('make');
-  var VehicleModel = document.getElementById('model');
-  var VehicleEdition = document.getElementById('edition');
-  var VehicleEngine = document.getElementById('engine');
-  VehicleDisplay.textContent = 'Current Vehicle: ' + VehicleYear.value + ' ' + VehicleMake.value + ' ' + VehicleModel.value + ' ' + VehicleEdition.value + ' ' + VehicleEngine.value;
+var vehicleSubmitButton = document.getElementById('vehicle-submit-button');
+function vehicleSelection(){
+  var vehicleDisplay = document.getElementById('vehicle-selection');
+  var vehicleYear = document.getElementById('year');
+  var vehicleMake = document.getElementById('make');
+  var vehicleModel = document.getElementById('model');
+  var vehicleEdition = document.getElementById('edition');
+  var vehicleEngine = document.getElementById('engine');
+  vehicleDisplay.textContent = 'Current Vehicle: ' + vehicleYear.value + ' ' + vehicleMake.value + ' ' + vehicleModel.value + ' ' + vehicleEdition.value + ' ' + vehicleEngine.value;
 }
-VehicleSubmitButton.addEventListener('click', function(event){
+vehicleSubmitButton.addEventListener('click', function(event){
   var content = event.target.getAttribute('data-content');
   event.preventDefault();
-  VehicleSelection(content);
+  vehicleSelection(content);
 },false);
 // Breadcrumb Selector ------------------------------------------|
 // Year breadcrumb selector
@@ -144,22 +142,9 @@ $('#engine').change( function(){
   var editionCrumb = document.getElementById('engine-crumb');
   editionCrumb.text = selectedEdition;
 });
-//// Search Tile Expand and Listener-------------------------------|
-//var TheSearchButton = document.getElementById('thesearchbutton');
-//function ResultResize(){
-//  var ResultBox = document.getElementById('search-tile');
-//  ResultBox.style.height = '1500px';
-//  ResultBox.style.width = '100%';
-//}
-//TheSearchButton.addEventListener('click',function(e){
-//  e.preventDefault();
-//  var UserSearchClick = document.getElementById('return1title');
-//  ResultResize(TheSearchInput.value);
-//},false);
-
 // Search Container show/hide --------------------------|
-var SearchTile = document.getElementById('search-tile');
-function SearchShow(contentId){
+var searchTile = document.getElementById('search-tile');
+function searchShow(contentId){
   var section = document.getElementById(contentId);
   var elStyle = window.getComputedStyle(section).getPropertyValue('display');
   if (elStyle == 'block') {
@@ -168,7 +153,22 @@ function SearchShow(contentId){
     section.style.display = 'block';
   }
 }
-SearchTile.addEventListener('dblclick', function(theEvent){
+searchTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
-  SearchShow(content);
+  searchShow(content);
+},false);
+// Document Container show/hide --------------------------|
+var documentsTile = document.getElementById('manual-tile');
+function documentShow(contentId){
+  var section = document.getElementById(contentId);
+  var elStyle = window.getComputedStyle(section).getPropertyValue('display');
+  if (elStyle == 'block') {
+    section.style.display = 'none';
+  } else if (elStyle == 'none' || elStyle == '') {
+    section.style.display = 'block';
+  }
+}
+documentsTile.addEventListener('dblclick', function(theEvent){
+  var content = theEvent.target.getAttribute('data-content');
+  documentShow(content);
 },false);

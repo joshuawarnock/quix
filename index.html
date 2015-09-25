@@ -13,7 +13,6 @@
   <link href="css/default.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-<!-- -----------------------------------HEADER TILE BEGIN-------------------------------------- -->
 <nav class="navbar navbar-default navbar-fixed-top mynavbar-header">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -35,11 +34,10 @@
         <li><a id="search-button" data-content="search-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-search"></i> Search</a></li>
       </ul>
       <div id="vehicle-selection"></div>
-    </div>   <!-- /.navbar-collapse -->
-  </div>   <!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
-<div class="packery">
-  <!-- ----------PACKERY BEGIN-------------->
+<div class="packery"> <!-- PACKERY BEGIN -->
   <div id="account-tile" data-content="account-container" class="item w3 h3 light">
     <div id="account-container" class="container">
       <div class="row">
@@ -57,8 +55,7 @@
                 </div>
               </div>
             </div>
-            <!-- ---------------------------TABS---------------------------------- -->
-            <div class="col-md-9">
+            <div class="col-md-9"> <!-- TABS -->
               <div id="account-button-group" class="btn-group" role="group" aria-label="...">
                 <button id="profile-button" data-content="profile-tab" type="button" class="btn btn-default">Profile</button>
                 <button id="vehicles-button" data-content="vehicles-tab" type="button" class="btn btn-default">Vehicles</button>
@@ -66,8 +63,7 @@
                 <button id="friends-button" data-content="friends-tab" type="button" class="btn btn-default">Friends</button>
                 <button id="photos-button" data-content="photos-tab" type="button" class="btn btn-default">Photos</button>
               </div>
-              <div class="tab-content all-tabs-content">
-                <!-----------------------------------------------------------------PROFILE TAB BEGIN------------------------------->
+              <div class="tab-content all-tabs-content"><!-- PROFILE TAB BEGIN -->
                 <div id="profile-tab">
                   <div class="row tab-row">
                     <div class="col-md-6">
@@ -85,8 +81,7 @@
                       </ul>
                     </div>
                   </div>
-                </div>
-                <!-- ---------------------------------------------------------------PROFILE TAB END------------------------------- -->
+                </div><!-- PROFILE TAB END -->
                 <div id="vehicles-tab">
                   <div class="row tab-row">
                     <div class="col-md-10">
@@ -171,15 +166,14 @@
     <div id="vehicle-selector">
       <div class="row">
         <div class="col-md-12">
-          <!-- ------------------------BREADCRUMB BEGIN----------------------- -->
+          <!-- BREADCRUMB BEGIN -->
           <ul class="btn-group btn-breadcrumbs" id="breadcrumbs" role="menubar" aria-label="breadcrumb">
             <li role="menuitem"><a id="year-crumb" class="btn btn-sm" data-toggle="year" href="#">Year</a></li>
             <li role="menuitem"><a id="make-crumb" class="btn btn-sm" data-toggle="make" href="#">Make</a></li>
             <li role="menuitem"><a id="model-crumb" class="btn btn-sm" data-toggle="model" href="#">Model</a></li>
             <li role="menuitem"><a id="edition-crumb" class="btn btn-sm" data-toggle="edition" href="#">Edition</a></li>
             <li role="menuitem"><a id="engine-crumb" class="btn btn-sm" data-toggle="engine" href="#">Engine</a></li>
-          </ul>
-          <!-- ------------------------BREADCRUMB END----------------------- -->
+          </ul><!-- BREADCRUMB END -->
         </div>
         <div class="col-md-12 dropdowns">
           <div class="dropdown modal-dropdowns">
@@ -338,25 +332,25 @@
       </div>
     </div>
   </div>
-  <!-- -----------------------------------SEARCH TILE BEGIN--------------------------------- -->
-  <div id="manual-tile" class="item w3 h3">
+  <!-- SEARCH TILE BEGIN -->
+  <div id="manual-tile" class="item w3 h3" data-content="documents-container">
     <div id="documents-container" class="documents-row">
-    <h3 class="text-center carousel-search-heading">Find Documents.</h3>
-    <form>
-      <div class="input-group stylish-input-group">
-        <div class="input-group-btn">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Instructions</a></li>
-          <li><a href="#">Manuals</a></li>
-          <li><a href="#">Tips</a></li>
-          <li><a href="#">Articles</a></li>
-        </ul>
+      <h3 class="text-center carousel-search-heading">Find Documents.</h3>
+        <form>
+          <div class="input-group stylish-input-group">
+            <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Instructions</a></li>
+              <li><a href="#">Manuals</a></li>
+              <li><a href="#">Tips</a></li>
+              <li><a href="#">Articles</a></li>
+            </ul>
+              </div>
+            <input id="documentinput" type="text" class="form-control" placeholder="Search">
+            <span class="input-group-addon carousel-search-button"><button id="documentsearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
           </div>
-        <input id="documentinput" type="text" class="form-control" placeholder="Search">
-        <span class="input-group-addon carousel-search-button"><button id="documentsearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
-      </div>
-    </form>
+        </form>
     </div>
   </div>
   <div id="shop-tile" class="item w3 h3">
@@ -429,18 +423,15 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- -----------------------------------SIGNIN TILE END----------------------------------- -->
-</div>
-<!-- ----------PACKERY END---------- -->
+  </div><!-- SIGNIN TILE END -->
+</div><!-- PACKERY END -->
 <footer class="footer">
   <nav class="navbar navbar-default mynavbar-footer navbar-fixed-bottom">
     <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <a class="navbar-brand" href="#"><span id="qspan">Q</span>uix</a>
       </div>
-    </div>    <!-- /.container-fluid -->
+    </div>
   </nav>
 </footer>
 <script src="js/jquery-2.1.4.min.js"></script>
