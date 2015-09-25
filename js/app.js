@@ -11,6 +11,8 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 app.use(express.static('../css'));
 app.use('/css',express.static('../css'));
+app.use(express.static('../fonts'));
+app.use('/fonts', express.static('../fonts'));
 app.use(express.static('../images'));
 app.use('/images',express.static('../images'));
 app.use(express.static('../js'));

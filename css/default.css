@@ -1,6 +1,10 @@
 /********************************************************************************
 ************************************MAIN CSS*************************************
 ********************************************************************************/
+@font-face {
+    font-family: future;
+    src: url("../fonts/futureforces.ttf");
+}
 body{
     background-color: #1A1A1A;
 }
@@ -12,6 +16,17 @@ body{
     border: 0px;
     border-radius: 0px;
     background: #1A1A1A;
+}
+#logo{
+    font-family: future;
+    font-size: 26px;
+}
+#navbar-menu{
+    font-family: future;
+    font-size: 18px;
+}
+#navbar-menu ul li{
+    margin-right: -10px;
 }
 .mynavbar-footer{
     margin: 0px auto;
@@ -162,6 +177,7 @@ body { font-family: sans-serif; }
 ********************************************************************************/
 .account-header{
     font-size: 20px;
+    font-family: future;
 }
 .account-paragraph{
     font-size: 16px;
@@ -186,12 +202,9 @@ body { font-family: sans-serif; }
     display: none;
 }
 #profile-image{
-    max-width: 90%;
+    max-width: 70%;
     max-height: auto;
     margin-top: 5%;
-}
-#profile-details{
-    margin-left: 10%;
 }
 .photo-thumbnail{
     width: 15%;
@@ -239,6 +252,10 @@ body { font-family: sans-serif; }
     margin-left: 20%;
     margin-right: 20%;
     display: none;
+}
+#selector-header{
+    font-family: future;
+    font-size: 34px;
 }
 #breadcrumbs li{
     display: inline;
@@ -328,6 +345,25 @@ ul{
     margin-left: 5%;
     margin-right: 5%;
 }
+#documents-header{
+    font-family: future;
+    font-size: 34px;
+}
+
+/********************************************************************************
+************************************VIDEOS***************************************
+********************************************************************************/
+#video-container{
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 300px !important;
+}
+.video-box{
+    max-width: 400px;
+    max-height: 225px;
+    padding: 5%;
+}
 /********************************************************************************
 ************************************SEARCH***************************************
 ********************************************************************************/
@@ -338,6 +374,10 @@ ul{
     margin-top: 7%;
     margin-left: 5%;
     margin-right: 5%;
+}
+#search-header{
+    font-family: future;
+    font-size: 38px;
 }
 #search-return-area{
     color: white;

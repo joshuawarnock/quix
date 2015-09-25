@@ -14,7 +14,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top mynavbar-header">
-  <div class="container-fluid">
+  <div id="header-container" class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -22,13 +22,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><span id="qspan">Q</span>uix</a>
+      <a id="logo" class="navbar-brand" href="/"><span id="qspan">Q</span>uix</a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div id="navbar-menu" class="collapse navbar-collapse">
       <ul id="nav-list" class="nav navbar-nav">
         <li><a id="account-button" data-content="account-tile" href="#" class="btn-link" data-toggle="append" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i> Account</a></li>
-        <li><a id="vehicle-button" data-content="vehicle-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-car"></i> My Vehicles</a></li>
-        <li><a id="manual-button" data-content="manual-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-book"></i> Manuals</a></li>
+        <li><a id="vehicle-button" data-content="vehicle-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-car"></i> Vehicles</a></li>
+        <li><a id="manual-button" data-content="manual-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-book"></i> Docs</a></li>
         <li><a id="shop-button" data-content="shop-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-cart-plus"></i> Shop</a></li>
         <li><a id="video-button" data-content="video-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-film"></i> Videos</a></li>
         <li><a id="search-button" data-content="search-tile" href="#" class="btn-link" data-toggle="append"><i class="fa fa-search"></i> Search</a></li>
@@ -46,7 +46,7 @@
             <div class="col-md-3">
               <div class="row">
                 <div class="col-md-12">
-                  <img id="profile-image" src="images/weekend-warrior.gif">
+                  <img id="profile-image" src="images/weekend-warrior-2.jpg">
                   <ul id="profile-details">
                     <li class="general-info"><h5><i class="fa fa-user"></i> Weekend-Warrior</h5></li>
                     <li class="general-info"><h5><i class="fa fa-map-marker"></i> Irvine, CA</h5></li>
@@ -165,15 +165,15 @@
   <div id="vehicle-tile" data-content="vehicle-selector" class="item w3 h3">
     <div id="vehicle-selector">
       <div class="row">
-        <div class="col-md-12">
-          <!-- BREADCRUMB BEGIN -->
+        <div><h5 id="selector-header">Select your vehicle</h5></div>
+        <div class="col-md-12"> <!-- BREADCRUMB BEGIN -->
           <ul class="btn-group btn-breadcrumbs" id="breadcrumbs" role="menubar" aria-label="breadcrumb">
             <li role="menuitem"><a id="year-crumb" class="btn btn-sm" data-toggle="year" href="#">Year</a></li>
             <li role="menuitem"><a id="make-crumb" class="btn btn-sm" data-toggle="make" href="#">Make</a></li>
             <li role="menuitem"><a id="model-crumb" class="btn btn-sm" data-toggle="model" href="#">Model</a></li>
             <li role="menuitem"><a id="edition-crumb" class="btn btn-sm" data-toggle="edition" href="#">Edition</a></li>
             <li role="menuitem"><a id="engine-crumb" class="btn btn-sm" data-toggle="engine" href="#">Engine</a></li>
-          </ul><!-- BREADCRUMB END -->
+          </ul> <!-- BREADCRUMB END -->
         </div>
         <div class="col-md-12 dropdowns">
           <div class="dropdown modal-dropdowns">
@@ -335,7 +335,7 @@
   <!-- SEARCH TILE BEGIN -->
   <div id="manual-tile" class="item w3 h3" data-content="documents-container">
     <div id="documents-container" class="documents-row">
-      <h3 class="text-center carousel-search-heading">Find Documents.</h3>
+      <h3 id="documents-header" class="text-center">Find Documents</h3>
         <form>
           <div class="input-group stylish-input-group">
             <div class="input-group-btn">
@@ -348,7 +348,7 @@
             </ul>
               </div>
             <input id="documentinput" type="text" class="form-control" placeholder="Search">
-            <span class="input-group-addon carousel-search-button"><button id="documentsearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span></button></span>
+            <span class="input-group-addon carousel-search-button"><button id="documentsearchbutton" type="submit"><span class="fa fa-search"></span></button></span>
           </div>
         </form>
     </div>
@@ -356,16 +356,18 @@
   <div id="shop-tile" class="item w3 h3">
   </div>
   <div id="video-tile" class="item w3 h3">
+    <div id="video-container" class="row">
+    </div>
   </div>
   <div id="search-tile" class="item w3 h3" data-content="search-container">
     <div id="search-container" class="row center-block search-row">
       <div class="col-md-12">
-        <div id="carousel-search-container">
-          <h3 class="text-center carousel-search-heading">Find your fix.</h3>
+        <div>
+          <h3 id="search-header" class="text-center">Find your fix.</h3>
           <form>
             <div class="input-group stylish-input-group">
               <input id="searchinput" type="text" class="form-control" placeholder="Search">
-                                <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="glyphicon glyphicon-search"></span>
+                                <span class="input-group-addon carousel-search-button"><button id="thesearchbutton" type="submit"><span class="fa fa-search"></span>
                                 </button>
                                 </span>
             </div>
@@ -429,7 +431,7 @@
   <nav class="navbar navbar-default mynavbar-footer navbar-fixed-bottom">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#"><span id="qspan">Q</span>uix</a>
+        <a id="logo" class="navbar-brand" href="/"><span id="qspan">Q</span>uix</a>
       </div>
     </div>
   </nav>

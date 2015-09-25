@@ -172,3 +172,10 @@ documentsTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
   documentShow(content);
 },false);
+
+var div_menu = document.getElementById('navbar-menu');
+window.onscroll = function (e) {
+  if (div_menu)
+    div_menu.style.top = window.pageYOffset + 'px';
+}
+
