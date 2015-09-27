@@ -2,8 +2,8 @@
 ************************************MAIN CSS*************************************
 ********************************************************************************/
 @font-face {
-    font-family: future;
-    src: url("../fonts/futureforces.ttf");
+    font-family: space;
+    src: url("../fonts/space-age.ttf");
 }
 body{
     background-color: #1A1A1A;
@@ -18,15 +18,26 @@ body{
     background: #1A1A1A;
 }
 #logo{
-    font-family: future;
+    font-family: space;
     font-size: 26px;
+    vertical-align: middle;
+}
+#logo-span{
+    color: #FF2121;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 #navbar-menu{
-    font-family: future;
-    font-size: 18px;
+    font-family: space;
+    font-size: 14px;
+}
+.menu-button{
+    color: #FF2121 !important;
+}
+.menu-button:hover{
+    color: #4991FC !important;
 }
 #navbar-menu ul li{
-    margin-right: -10px;
+    margin-right: -15px;
 }
 .mynavbar-footer{
     margin: 0px auto;
@@ -35,11 +46,21 @@ body{
     border-radius: 0px;
     background: #1A1A1A;
 }
+.footer-text{
+    font-size: 14px;
+    color: whitesmoke;
+    margin-top: 1.5%;
+}
 #qspan{
     font-size: 2em;
+    color: #fec20c;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 #vehicle-selection{
     margin-top: 1.5%;
+    margin-left: 82%;
+    color: #fec20c;
+    font-size: 12px;
 }
 .tile-image {
     height: 100%;
@@ -103,7 +124,7 @@ body { font-family: sans-serif; }
 #account-tile{
     display: block;
     overflow-x: auto;
-    background: #4991FC url("/images/orange-green-user-icon.png") no-repeat center center !important; /* Old browsers */
+    background: #4991FC url("/images/user-icon-orange-yellow.png") no-repeat center center !important; /* Old browsers */
     background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /* Chrome10+,Safari5.1+ */
@@ -115,7 +136,7 @@ body { font-family: sans-serif; }
 #vehicle-tile{
     display: block;
     overflow-x: auto;
-    background: #4991FC url("/images/orange-green-car-icon.png") no-repeat center center !important; /* Old browsers */
+    background: #4991FC url("/images/car-icon-orange-yellow.png") no-repeat center center !important; /* Old browsers */
     background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /* Chrome10+,Safari5.1+ */
@@ -127,7 +148,7 @@ body { font-family: sans-serif; }
 #manual-tile{
     display: block;
     overflow-x: auto;
-    background: #4991FC url("/images/orange-green-book-icon.png") no-repeat center center !important; /* Old browsers */
+    background: #4991FC url("/images/book-icon-orange-yellow.png") no-repeat center center !important; /* Old browsers */
     background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /* Chrome10+,Safari5.1+ */
@@ -139,7 +160,7 @@ body { font-family: sans-serif; }
 #shop-tile{
     display: block;
     overflow-x: auto;
-    background: #4991FC url("/images/orange-green-shop-icon.png") no-repeat center center !important; /* Old browsers */
+    background: #4991FC url("/images/shop-icon-orange-yellow.png") no-repeat center center !important; /* Old browsers */
     background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /* Chrome10+,Safari5.1+ */
@@ -151,7 +172,7 @@ body { font-family: sans-serif; }
 #video-tile{
     display: block;
     overflow-x: auto;
-    background: #4991FC url("/images/orange-green-film-icon.png") no-repeat center center !important; /* Old browsers */
+    background: #4991FC url("/images/play-icon-orange-yellow.png") no-repeat center center !important; /* Old browsers */
     background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /* Chrome10+,Safari5.1+ */
@@ -163,7 +184,7 @@ body { font-family: sans-serif; }
 #search-tile{
     display: block;
     overflow-x: auto;
-    background: #4991FC url("/images/orange-green-search-icon.png") no-repeat center center !important; /* Old browsers */
+    background: #4991FC url("/images/search-icon-orange-yellow.png") no-repeat center center !important; /* Old browsers */
     background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%) !important; /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)) ; /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%) ; /* Chrome10+,Safari5.1+ */
@@ -177,10 +198,13 @@ body { font-family: sans-serif; }
 ********************************************************************************/
 .account-header{
     font-size: 20px;
-    font-family: future;
+    font-family: space;
+    color:black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 .account-paragraph{
     font-size: 16px;
+    color: black;
 }
 #account-container{
     margin-left: 5%;
@@ -202,8 +226,12 @@ body { font-family: sans-serif; }
     display: none;
 }
 #profile-image{
-    max-width: 70%;
+    max-width: 175px;
     max-height: auto;
+    margin-top: 5%;
+}
+#profile-details{
+    color: black;
     margin-top: 5%;
 }
 .photo-thumbnail{
@@ -248,14 +276,16 @@ body { font-family: sans-serif; }
 ********************************************************************************/
 #vehicle-selector{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-left: 20%;
     margin-right: 20%;
     display: none;
 }
 #selector-header{
-    font-family: future;
+    font-family: space;
     font-size: 34px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 #breadcrumbs li{
     display: inline;
@@ -346,8 +376,10 @@ ul{
     margin-right: 5%;
 }
 #documents-header{
-    font-family: future;
+    font-family: space;
     font-size: 34px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 /********************************************************************************
@@ -376,8 +408,10 @@ ul{
     margin-right: 5%;
 }
 #search-header{
-    font-family: future;
+    font-family: space;
     font-size: 38px;
+    color: black;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 #search-return-area{
     color: white;

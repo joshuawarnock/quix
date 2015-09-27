@@ -98,8 +98,7 @@ function vehicleSelection(){
   var vehicleMake = document.getElementById('make');
   var vehicleModel = document.getElementById('model');
   var vehicleEdition = document.getElementById('edition');
-  var vehicleEngine = document.getElementById('engine');
-  vehicleDisplay.textContent = 'Current Vehicle: ' + vehicleYear.value + ' ' + vehicleMake.value + ' ' + vehicleModel.value + ' ' + vehicleEdition.value + ' ' + vehicleEngine.value;
+  vehicleDisplay.textContent = vehicleYear.value + ' ' + vehicleMake.value + ' ' + vehicleModel.value + ' ' + vehicleEdition.value;
 }
 vehicleSubmitButton.addEventListener('click', function(event){
   var content = event.target.getAttribute('data-content');
@@ -133,13 +132,6 @@ $('#edition').change( function(){
   var element = document.getElementById('edition');
   var selectedEdition = element.options[element.selectedIndex].text;
   var editionCrumb = document.getElementById('edition-crumb');
-  editionCrumb.text = selectedEdition;
-});
-// Engine breadcrumb selector
-$('#engine').change( function(){
-  var element = document.getElementById('engine');
-  var selectedEdition = element.options[element.selectedIndex].text;
-  var editionCrumb = document.getElementById('engine-crumb');
   editionCrumb.text = selectedEdition;
 });
 // Search Container show/hide --------------------------|
@@ -177,5 +169,4 @@ var div_menu = document.getElementById('navbar-menu');
 window.onscroll = function (e) {
   if (div_menu)
     div_menu.style.top = window.pageYOffset + 'px';
-}
-
+};
