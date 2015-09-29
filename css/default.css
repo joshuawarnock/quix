@@ -47,9 +47,12 @@ body{
     background: #1A1A1A;
 }
 .footer-text{
-    font-size: 14px;
+    font-size: 12px;
     color: whitesmoke;
     margin-top: 1.5%;
+}
+.social-icon{
+    margin-left: 2%;
 }
 #qspan{
     font-size: 2em;

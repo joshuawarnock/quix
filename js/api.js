@@ -7,6 +7,7 @@ var request = require('request');
 var path = require('path');
 var router = express.Router();
 var google = require('google');
+
 router.get('/search/:term', function(req,res,next){
   google.resultsPerPage = 10;
   var nextCounter = 0;

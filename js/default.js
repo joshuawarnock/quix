@@ -2,7 +2,7 @@
  * Created by joshuawarnock on 9/15/15.
  */
 
-// Packery setup------------------------------------------------------------------|
+// Packery setup-------------------------------------------|
 $( function() {
   var $container = $('.packery').packery({
     columnWidth: 20,
@@ -30,7 +30,7 @@ $( function() {
     }
   });
 });
-// Tile Hide/Show-------------------------------------------|
+// Tile Hide/Show---------------------------------------------|
 var grabbedList = document.getElementById('nav-list');
 grabbedList.addEventListener('click', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
