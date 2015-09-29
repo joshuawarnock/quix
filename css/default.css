@@ -47,12 +47,11 @@ body{
     background: #1A1A1A;
 }
 .footer-text{
-    font-size: 12px;
+    font-size: 16px;
     color: whitesmoke;
-    margin-top: 1.5%;
 }
 .social-icon{
-    margin-left: 2%;
+    padding: 2%;
 }
 #qspan{
     font-size: 2em;
@@ -417,17 +416,18 @@ ul{
     text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 #search-return-area{
-    color: white;
+    color: black;
     padding: 10px 10px 10px 10px;
 }
-.return-title{
+.result-title{
     font-size: 24px;
     color: #262626;
     font-weight: 900;
 }
-.return-link{
+.result-link{
     text-decoration: underline;
+    color: blue;
 }
-.return-description{
+.result-description{
     font-size: 18px;
 }
