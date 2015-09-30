@@ -2,7 +2,7 @@
  * Created by joshuawarnock on 9/15/15.
  */
 
-// Packery setup-------------------------------------------|
+// Dashboard Setup-------------------------------------------|
 $( function() {
   var $container = $('.packery').packery({
     columnWidth: 20,

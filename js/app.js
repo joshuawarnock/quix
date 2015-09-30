@@ -10,7 +10,6 @@ var api = require('./api.js');
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 
-
 app.use('/css',express.static('../css'));
 app.use('/fonts', express.static('../fonts'));
 app.use('/images',express.static('../images'));
