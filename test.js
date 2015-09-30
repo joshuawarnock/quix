@@ -26,8 +26,12 @@ describe('Express Backend Test', function(){
   it('sends /index.html', function(done){
     agent
         .get('/')
+        .set('Accept', 'text/html')
         .expect('Content-Type', 'text/html; charset=UTF-8')
-        .end(done)
-  })
+        .end(function(err, res){
+          if (err) return done(err);
+          done();
+        })
+  });
 });
 
