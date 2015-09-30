@@ -12,7 +12,7 @@ describe('Express Backend Test', function(){
   var app = express();
 
   app.get('/', function(req, res) {
-    res.send('/');
+    res.sendFile(path.join(__dirname + '/'));
   });
 
   var agent = request.agent(app);
@@ -23,10 +23,10 @@ describe('Express Backend Test', function(){
         .expect(200)
         .end(done)
   });
-  it('sends /', function(done){
+  it('sends /index.html', function(done){
     agent
         .get('/')
-        .expect('/')
+        .expect('Content-Type', 'text/html; charset=UTF-8')
         .end(done)
   })
 });
