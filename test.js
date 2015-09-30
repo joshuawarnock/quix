@@ -5,13 +5,14 @@
 var request = require('supertest');
 var should = require('should');
 var express = require('express');
+var path = require('path');
 
 describe('Express Backend Test', function(){
 
   var app = express();
 
-  app.get('/', function(req, res){
-    res.send('hello world');
+  app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
   });
 
   var agent = request.agent(app);
@@ -22,10 +23,10 @@ describe('Express Backend Test', function(){
         .expect(200)
         .end(done)
   });
-  it('sends hello world', function(done){
+  it('sends /index.html', function(done){
     agent
         .get('/')
-        .expect('hello world')
+        .expect('/index.html')
         .end(done)
   })
 });
