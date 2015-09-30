@@ -17,13 +17,13 @@ describe('Express Backend Test', function(){
 
   var agent = request.agent(app);
 
-  it('status code 200', function(done){
+  it('Page status OK.', function(done){
     agent
         .get('/')
         .expect(200)
         .end(done)
   });
-  it('sends /index.html', function(done){
+  it('Verify index.html header.', function(done){
     agent
         .get('/')
         .set('Accept', 'text/html')
