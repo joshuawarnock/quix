@@ -8,6 +8,7 @@ var nodemon = require('gulp-nodemon');
 var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
+var imageMin = require('gulp-imagemin');
 
 
 gulp.task('start', function() {
@@ -44,8 +45,15 @@ gulp.task('minify-html', function() {
 
 gulp.task('minify-css', function() {
   return gulp.src('css/*.css')
+      .pipe(minifyCss())
       .pipe(gulp.dest('public/dist/css'))
 });
 
-gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css']);
+gulp.task('minify-image', function() {
+  return gulp.src('images/*')
+      .pipe(imageMin())
+      .pipe(gulp.dest('public/dist/images'))
+});
+
+gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image']);
 
