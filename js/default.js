@@ -78,10 +78,12 @@ accountButtons.addEventListener('click', function(){
 });
 // Vehicle Selector Hide/Show-----------------------------|
 var vehicleTile = document.getElementById('vehicle-tile');
+
 vehicleTile.addEventListener('dblclick', function(theEvent){
   var content = theEvent.target.getAttribute('data-content');
   selectorShow(content);
 },false);
+
 function selectorShow(contentId){
   var section = document.getElementById(contentId);
   if (section.style.display == 'block') {
@@ -90,8 +92,10 @@ function selectorShow(contentId){
     section.style.display = 'block';
   }
 }
+
 // Vehicle Selector Display Selection--------------------------------------|
 var vehicleSubmitButton = document.getElementById('vehicle-submit-button');
+
 function vehicleSelection(){
   var vehicleDisplay = document.getElementById('vehicle-selection');
   var vehicleYear = document.getElementById('year');
@@ -100,11 +104,13 @@ function vehicleSelection(){
   var vehicleEdition = document.getElementById('edition');
   vehicleDisplay.textContent = vehicleYear.value + ' ' + vehicleMake.value + ' ' + vehicleModel.value + ' ' + vehicleEdition.value;
 }
+
 vehicleSubmitButton.addEventListener('click', function(event){
   var content = event.target.getAttribute('data-content');
   event.preventDefault();
   vehicleSelection(content);
 },false);
+
 // Breadcrumb Selector ------------------------------------------|
 // Year breadcrumb selector
 $('#year').change( function(){
@@ -113,6 +119,7 @@ $('#year').change( function(){
   var yearCrumb = document.getElementById('year-crumb');
   yearCrumb.text = selectedYear;
 });
+
 // Make breadcrumb selector
 $('#make').change( function(){
   var element = document.getElementById('make');
@@ -120,6 +127,7 @@ $('#make').change( function(){
   var makeCrumb = document.getElementById('make-crumb');
   makeCrumb.text = selectedMake;
 });
+
 // Model breadcrumb selector
 $('#model').change( function(){
   var element = document.getElementById('model');
