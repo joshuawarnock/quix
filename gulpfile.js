@@ -9,12 +9,17 @@ var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
 var imageMin = require('gulp-imagemin');
-
+var browserSync = require('browser-sync').create();
 
 gulp.task('start', function() {
   nodemon({
     script: 'app.js',
-  }).on('start', ['test'])
+  })
+      .on('start', ['test', 'watch'])
+      .on('change', ['test','watch'])
+      .on('restart', function() {
+        console.log('The server had to restart');
+      })
 });
 
 gulp.task('test', function() {
@@ -55,5 +60,13 @@ gulp.task('minify-image', function() {
       .pipe(gulp.dest('public/dist/images'))
 });
 
-gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image']);
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  })
+});
+
+gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image', 'browser-sync']);
 
