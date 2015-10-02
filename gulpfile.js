@@ -9,7 +9,10 @@ var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
 var imageMin = require('gulp-imagemin');
-//var browserSync = require('browser-sync').create();
+var browserSync = require('browser-sync').create();
+
+var requireDir = require('require-dir');
+var dir = requireDir('/gulping');
 
 gulp.task('start', function() {
   nodemon({
@@ -31,11 +34,11 @@ gulp.task('watch', function() {
   gulp.watch('*.js', ['test']);
 });
 
-gulp.task('uglify', function() {
-  return gulp.src('js/*.js')
-      .pipe(uglify())
-      .pipe(gulp.dest('public/dist/js'));
-});
+//gulp.task('uglify', function() {
+//  return gulp.src('/js/*.js')
+//      .pipe(uglify())
+//      .pipe(gulp.dest('public/dist/js'));
+//});
 
 gulp.task('minify-html', function() {
   var opts = {
@@ -49,24 +52,26 @@ gulp.task('minify-html', function() {
 });
 
 gulp.task('minify-css', function() {
-  return gulp.src('css/*.css')
+  return gulp.src('/css/*.css')
       .pipe(minifyCss())
       .pipe(gulp.dest('public/dist/css'))
 });
 
 gulp.task('minify-image', function() {
-  return gulp.src('images/*')
+  return gulp.src('/images/*')
       .pipe(imageMin())
       .pipe(gulp.dest('public/dist/images'))
 });
 
-//gulp.task('browser-sync', function() {
-//  browserSync.init({
-//    server: {
-//      baseDir: './'
-//    }
-//  })
-//});
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: './'
+    }
+  })
+});
 
-gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image']);
+require('require-dir')('./gulping');
+
+gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image', 'browser-sync']);
 
