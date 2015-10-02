@@ -9,7 +9,7 @@ var uglify = require('gulp-uglify');
 var minifyHTML = require('gulp-minify-html');
 var minifyCss = require('gulp-minify-css');
 var imageMin = require('gulp-imagemin');
-var browserSync = require('browser-sync').create();
+//var browserSync = require('browser-sync').create();
 
 gulp.task('start', function() {
   nodemon({
@@ -60,13 +60,13 @@ gulp.task('minify-image', function() {
       .pipe(gulp.dest('public/dist/images'))
 });
 
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: './'
-    }
-  })
-});
+//gulp.task('browser-sync', function() {
+//  browserSync.init({
+//    server: {
+//      baseDir: './'
+//    }
+//  })
+//});
 
-gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image', 'browser-sync']);
+gulp.task('default', ['test', 'watch', 'uglify', 'minify-html', 'minify-css', 'minify-image']);
 
