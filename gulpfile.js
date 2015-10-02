@@ -34,7 +34,7 @@ gulp.task('watch', function() {
 gulp.task('uglify', function() {
   return gulp.src('js/*.js')
       .pipe(uglify())
-      .pipe(gulp.dest('public/dist/'));
+      .pipe(gulp.dest('public/dist/js'));
 });
 
 gulp.task('minify-html', function() {
