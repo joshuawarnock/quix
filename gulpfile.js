@@ -5,6 +5,7 @@
 var gulp = require('gulp');
 var mocha = require('gulp-mocha');
 var requireDir = require('require-dir');
+var wiredep = require('wiredep').stream;
 var dir = requireDir('./gulping');
 require('require-dir')('./gulping');
 

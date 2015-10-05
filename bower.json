@@ -1,0 +1,26 @@
+{
+  "name": "quix",
+  "version": "0.0.0",
+  "homepage": "https://github.com/joshuawarnock/quix",
+  "authors": [
+    "mugillicutty <joshua.warnock@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "~4.4.0",
+    "bootstrap": "~3.3.5",
+    "packery": "~1.4.3"
+  }
+}
