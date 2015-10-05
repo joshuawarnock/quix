@@ -3,15 +3,33 @@
  */
 
 var gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+var sync = require('browser-sync').create();
+var nodemon = require('nodemon');
 
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: './'
-    }
-  });
-  gulp.watch('*.html').on('change', browserSync.reload);
+
+sync.init({
+  proxy: 'http://localhost:1400',
+      reloadDelay: 2000
 });
+
+gulp.task('nodemon', function() {
+  nodemon({script: 'app.js'})
+      .on('start', sync.reload)
+});
+
+gulp.task('watch', function() {
+  gulp.watch(['*.html', '*.js'], function() {
+    sync.reload();
+  })
+});
+
+//gulp.task('browser-sync', function() {
+//  browserSync.init({
+//    server: {
+//      baseDir: './'
+//    }
+//  });
+//  gulp.watch('*.html').on('change', browserSync.reload);
+//});
 
 module.exports = require('require-dir');
